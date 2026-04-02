@@ -43,22 +43,19 @@ const navigationItems = [
 
 export default function Header() {
   return (
-    <header
-      className={clsx(
-        "bg-[#2f3b1d]",
-        "text-white",
-      )}
-    >
+    <header className={clsx("bg-[#2f3b1d]", "text-white")}>
       <div
         className={clsx(
           "flex",
           "flex-col",
-          "xl:grid xl:grid-cols-[186px_minmax(0,1fr)]",
+          "lg:grid lg:grid-cols-[170px_minmax(0,1fr)]",
+          "xl:grid-cols-[186px_minmax(0,1fr)]",
         )}
       >
         <Link
           href="/"
           aria-label="Ir para a página inicial da Soil"
+          title="Ir para a página inicial da Soil"
           className={clsx(
             "z-10",
             "flex",
@@ -72,7 +69,8 @@ export default function Header() {
             "py-4",
             "shadow-[0_8px_24px_rgba(0,0,0,0.12)]",
             "sm:px-8",
-            "xl:min-h-24.5 xl:w-full xl:px-7 xl:py-5",
+            "lg:min-h-22 lg:w-full lg:px-5 lg:py-4",
+            "xl:min-h-24.5 xl:px-7 xl:py-5",
           )}
         >
           <Image
@@ -81,8 +79,7 @@ export default function Header() {
             width={121}
             height={57}
             priority
-            style={{ height: "auto" , width: "auto"}}
-            className={clsx("sm:w-30.25")}
+            style={{ height: "auto", width: "auto" }}
           />
         </Link>
 
@@ -97,20 +94,24 @@ export default function Header() {
               "gap-y-2",
               "px-4",
               "py-2",
-              "text-[12px]",
+              "sm:text-[12px]",
+              "md:text-[14px]",
+              "lg:text-[16px]",
               "font-medium",
               "tracking-[0.01em]",
               "text-white",
               "bg-[#a5bf55]",
               "sm:px-6",
               "lg:justify-end",
-              "lg:gap-x-5",
-              "xl:min-h-7 xl:px-8 xl:py-1.5",
+              "lg:gap-x-4 lg:px-5 lg:py-1.5",
+              "xl:gap-x-5 xl:px-8 xl:min-h-7",
             )}
           >
             {contactItems.map(({ label, href, icon: Icon }) => (
               <a
                 key={label}
+                aria-label={label}
+                title={label}
                 href={href}
                 className={clsx(
                   "inline-flex",
@@ -141,7 +142,8 @@ export default function Header() {
               "lg:flex-row",
               "lg:items-center",
               "lg:justify-between",
-              "xl:min-h-17.5 xl:px-10 xl:py-0",
+              "lg:gap-3 lg:px-5 lg:py-3",
+              "xl:gap-4 xl:px-10 xl:min-h-17.5",
             )}
           >
             <nav aria-label="Navegação principal">
@@ -150,22 +152,23 @@ export default function Header() {
                   "flex",
                   "flex-wrap",
                   "justify-center",
-                  "gap-x-5",
+                  "gap-x-4",
                   "gap-y-3",
-                  "text-sm",
                   "font-medium",
-                  "text-white",
                   "lg:justify-start",
+                  "xl:gap-x-5",
                 )}
               >
                 {navigationItems.map(({ label, href }, index) => (
                   <li key={label}>
                     <Link
+                      aria-label={label}
+                      title={label}
                       href={href}
                       className={clsx(
                         "transition-colors",
                         index === 0
-                          ? "font-bold text-white"
+                          ? "font-bold"
                           : "text-white/95 hover:text-white",
                       )}
                     >
@@ -187,7 +190,8 @@ export default function Header() {
             >
               <button
                 type="button"
-                aria-label="Pesquisar"
+                title="Botão de pesquisa"
+                aria-label="Botão de pesquisa"
                 className={clsx(
                   "inline-flex",
                   "h-10",
@@ -195,7 +199,6 @@ export default function Header() {
                   "items-center",
                   "justify-center",
                   "rounded-full",
-                  "text-white",
                   "transition-colors",
                   "hover:bg-white/10",
                 )}
@@ -205,6 +208,8 @@ export default function Header() {
 
               <button
                 type="button"
+                title="Botão de login"
+                aria-label="Botão de login"
                 className={clsx(
                   "inline-flex",
                   "min-w-28",
@@ -214,7 +219,6 @@ export default function Header() {
                   "bg-white",
                   "px-8",
                   "py-3",
-                  "text-sm",
                   "font-bold",
                   "text-[#2f3b1d]",
                   "transition-colors",
