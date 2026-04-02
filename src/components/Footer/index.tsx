@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import DefaultButton from "@/components/DefaultButton";
 
 export default function Footer() {
   return (
@@ -53,30 +54,7 @@ export default function Footer() {
           </p>
         </div>
 
-        <button
-          type="button"
-          aria-label="Fale com nossos especialistas"
-          title="Fale com nossos especialistas"
-          className={clsx(
-            "inline-flex",
-            "w-full",
-            "items-center",
-            "justify-center",
-            "rounded-full",
-            "bg-[#b7d256]",
-            "px-8",
-            "py-4",
-            "text-sm",
-            "font-bold",
-            "text-white",
-            "transition-colors",
-            "hover:bg-[#a8c247]",
-            "md:w-auto",
-            "md:min-w-60",
-          )}
-        >
-          Fale com nossos especialistas
-        </button>
+        <DefaultButton>Fale como nossos especialistas</DefaultButton>
       </div>
     </footer>
   );
