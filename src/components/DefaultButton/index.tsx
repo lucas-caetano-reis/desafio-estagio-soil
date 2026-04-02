@@ -18,19 +18,20 @@ export default function DefaultButton({
       className={clsx(
         "inline-flex",
         "w-full",
+        "md:w-auto",
+        "md:min-w-60",
         "items-center",
         "justify-center",
         "rounded-full",
         "bg-[#b7d256]",
         "px-8",
         "py-4",
-        "text-sm",
+        "text-3xl",
+        "md:text-sm",
         "font-bold",
         "text-white",
         "transition-colors",
         "hover:bg-[#a8c247]",
-        "md:w-auto",
-        "md:min-w-60",
         className,
       )}
       {...props}

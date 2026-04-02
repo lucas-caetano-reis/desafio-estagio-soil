@@ -7,9 +7,9 @@ export default function Footer() {
       className={clsx(
         "w-full",
         "bg-[#3f4c2d]",
+        "text-white",
         "px-6",
         "py-10",
-        "text-white",
         "md:px-16",
         "lg:px-24",
       )}
@@ -18,22 +18,22 @@ export default function Footer() {
         className={clsx(
           "mx-auto",
           "flex",
+          "flex-col",
+          "md:flex-row",
           "w-full",
           "max-w-6xl",
-          "flex-col",
           "gap-8",
-          "md:flex-row",
           "md:items-center",
           "md:justify-between",
         )}
       >
-        <div className={clsx("max-w-3xl")}>
+        <div className={clsx("max-w-2xl")}>
           <h2
             className={clsx(
-              "text-3xl",
               "font-bold",
-              "leading-tight",
-              "md:text-5xl",
+              "leading-snug",
+              "text-3xl",
+              "md:text-4xl",
             )}
           >
             Vamos transformar a sua irrigação?
@@ -42,10 +42,9 @@ export default function Footer() {
           <p
             className={clsx(
               "mt-4",
-              "max-w-2xl",
-              "text-lg",
               "leading-snug",
               "text-white/95",
+              "text-lg",
               "md:text-2xl",
             )}
           >
@@ -54,7 +53,7 @@ export default function Footer() {
           </p>
         </div>
 
-        <DefaultButton>Fale como nossos especialistas</DefaultButton>
+        <DefaultButton>Fale com nossos especialistas</DefaultButton>
       </div>
     </footer>
   );
