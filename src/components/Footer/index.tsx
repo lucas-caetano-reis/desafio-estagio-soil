@@ -31,9 +31,8 @@ export default function Footer() {
           <h2
             className={clsx(
               "font-bold",
-              "leading-snug",
-              "text-3xl",
-              "md:text-4xl",
+              "text-3xl/snug",
+              "md:text-4xl/snug",
             )}
           >
             Vamos transformar a sua irrigação?
@@ -42,10 +41,9 @@ export default function Footer() {
           <p
             className={clsx(
               "mt-4",
-              "leading-snug",
               "text-white/95",
-              "text-lg",
-              "md:text-2xl",
+              "text-lg/snug",
+              "md:text-2xl/snug",
             )}
           >
             Reduza custos, aumente a produtividade e tenha controle total do seu
