@@ -28,23 +28,13 @@ export default function ContactBar() {
   return (
     <div
       className={clsx(
-        "flex",
-        "flex-wrap",
-        "items-center",
-        "justify-center",
-        "gap-x-4",
-        "gap-y-2",
-        "px-4",
-        "py-2",
-        "sm:text-[12px]",
-        "md:text-[14px]",
-        "lg:text-[16px]",
-        "font-medium",
-        "tracking-[0.01em]",
-        "text-white",
+        "flex flex-wrap",
         "bg-[#a5bf55]",
+        "items-center justify-center lg:justify-end",
+        "sm:text-[12px] md:text-[14px] lg:text-[16px]",
+        "font-medium tracking-[0.01em]",
+        "gap-x-4 gap-y-2 px-4 py-2",
         "sm:px-6",
-        "lg:justify-end",
         "lg:gap-x-4 lg:px-5 lg:py-1.5",
         "xl:gap-x-5 xl:px-8 xl:min-h-7",
       )}
@@ -58,10 +48,8 @@ export default function ContactBar() {
           className={clsx(
             "inline-flex",
             "items-center",
-            "gap-1.5",
-            "leading-tight",
-            "transition-opacity",
-            "hover:opacity-85",
+            "gap-1.5 leading-tight",
+            "transition-opacity hover:opacity-85",
           )}
         >
           <Icon
