@@ -17,22 +17,13 @@ export default function DefaultButton({
       type={type}
       className={clsx(
         "inline-flex",
-        "w-full",
-        "md:w-auto",
-        "md:min-w-60",
-        "items-center",
-        "justify-center",
+        "w-full md:w-auto md:min-w-60",
+        "items-center justify-center",
         "rounded-full",
-        "bg-[#b7d256]",
-        "px-8",
-        "py-4",
-        "text-[16px]",
-        "md:text-[18px]",
-        "lg:text-[20px]",
-        "font-bold",
-        "text-white",
-        "transition-colors",
-        "hover:bg-[#a8c247]",
+        "px-8 py-4",
+        "sm:text-[16px] md:text-[18px] lg:text-[20px]",
+        "font-bold text-white",
+        "bg-[#b7d256] transition-colors hover:bg-[#a8c247]",
         className,
       )}
       {...props}

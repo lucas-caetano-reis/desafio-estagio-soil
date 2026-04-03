@@ -11,17 +11,15 @@ export default function Logo() {
       className={clsx(
         "z-10",
         "flex",
-        "w-fit",
-        "items-center",
-        "justify-center",
+        "w-fit lg:w-full",
+        "items-center justify-center",
         "self-start",
         "rounded-br-4xl",
         "bg-white",
-        "px-6",
-        "py-4",
         "shadow-[0_8px_24px_rgba(0,0,0,0.12)]",
+        "px-6 py-4",
         "sm:px-8",
-        "lg:min-h-22 lg:w-full lg:px-5 lg:py-4",
+        "lg:min-h-22 lg:px-5 lg:py-4",
         "xl:min-h-24.5 xl:px-7 xl:py-5",
       )}
     >
