@@ -20,7 +20,8 @@ export default function MarketSection() {
     >
       <div
         className={clsx(
-          "mx-auto flex w-full max-w-7xl flex-col",
+          "flex flex-col",
+          "mx-auto w-full max-w-7xl",
           "gap-12",
           "md:flex-row md:items-center md:justify-between md:gap-10",
           "xl:gap-16",
@@ -62,26 +63,14 @@ export default function MarketSection() {
           >
             {marketHighlights.map((highlight) => (
               <li key={highlight} className="flex gap-3">
-                <span className="mt-[0.5em] text-[#7a7f86]">-</span>
+                <span className="mt-[0.5em]">-</span>
                 <span>{highlight}</span>
               </li>
             ))}
           </ul>
         </div>
 
-        <div className={clsx("w-full md:max-w-155", "xl:max-w-175")}>
-          <div
-            className={clsx(
-              "relative mx-auto w-full overflow-hidden",
-              "aspect-1.25/1",
-              "max-w-135",
-              "sm:max-w-155",
-              "md:max-w-none",
-            )}
-          >
-            <AppImage />
-          </div>
-        </div>
+        <AppImage />
       </div>
     </section>
   );
