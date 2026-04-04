@@ -78,8 +78,8 @@ export default function AdvantagesIcons() {
               "flex flex-col",
               "items-center text-center",
               "lg:last:col-start-auto",
-              !isEven && "lg:pt-8 xl:pt-10",
-              index === advantages.length - 1 && "col-span-2 sm:col-span-1",
+              isEven && "lg:pt-8 xl:pt-10",
+              index === advantages.length - 1 && "col-span-2 lg:col-span-1",
             )}
           >
             <div
