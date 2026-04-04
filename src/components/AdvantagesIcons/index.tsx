@@ -1,11 +1,5 @@
 import clsx from "clsx";
-import {
-  ChartNoAxesColumnIncreasingIcon,
-  MapPinnedIcon,
-  RadioTowerIcon,
-  SproutIcon,
-  WorkflowIcon,
-} from "lucide-react";
+import Image from "next/image";
 
 const advantages = [
   {
@@ -14,7 +8,8 @@ const advantages = [
         Até <strong>80% menos deslocamentos.</strong>
       </>
     ),
-    icon: MapPinnedIcon,
+    iconAlt: "Ícone de deslocamento e localização.",
+    iconSrc: "/images/icone_caminho.png",
   },
   {
     description: (
@@ -22,7 +17,8 @@ const advantages = [
         Até <strong>40% de economia em energia elétrica.</strong>
       </>
     ),
-    icon: WorkflowIcon,
+    iconAlt: "Ícone de conta de luz e economia de energia.",
+    iconSrc: "/images/icone_conta_de_luz.png",
   },
   {
     description: (
@@ -31,7 +27,8 @@ const advantages = [
         <br />e inteligente.
       </>
     ),
-    icon: SproutIcon,
+    iconAlt: "Ícone de irrigação inteligente.",
+    iconSrc: "/images/icone_irrigacao.png",
   },
   {
     description: (
@@ -41,7 +38,8 @@ const advantages = [
         menos desperdício.
       </>
     ),
-    icon: ChartNoAxesColumnIncreasingIcon,
+    iconAlt: "Ícone de gráfico com crescimento de produtividade.",
+    iconSrc: "/images/icone_grafico.png",
   },
   {
     description: (
@@ -51,7 +49,8 @@ const advantages = [
         qualquer local.
       </>
     ),
-    icon: RadioTowerIcon,
+    iconAlt: "Ícone de transmissão e cobertura de sinal.",
+    iconSrc: "/images/icone_transmissao.png",
   },
 ] as const;
 
@@ -59,61 +58,57 @@ export default function AdvantagesIcons() {
   return (
     <div
       className={clsx(
-        "grid grid-cols-2 lg:grid-cols-5",
-        "mt-12 lg:mt-16",
         "w-full sm:max-w-3xl lg:max-w-none",
+        "mt-12 lg:mt-16",
+        "grid grid-cols-2 lg:grid-cols-5",
         "gap-x-6 gap-y-10",
         "sm:gap-x-8",
         "lg:gap-x-5 lg:gap-y-0",
         "xl:gap-x-8",
       )}
     >
-      {advantages.map(({ description, icon: Icon }, index) => {
+      {advantages.map(({ description, iconAlt, iconSrc }, index) => {
         const isEven = index % 2 === 0;
 
         return (
           <article
-            key={index}
+            key={iconSrc}
             className={clsx(
               "flex flex-col",
               "items-center text-center",
-              "lg:last:col-start-auto",
               isEven && "lg:pt-8 xl:pt-10",
               index === advantages.length - 1 && "col-span-2 lg:col-span-1",
             )}
           >
             <div
               className={clsx(
-                "flex",
+                "flex relative",
                 "items-center justify-center",
-                "rounded-full border shadow-[0_10px_24px_rgba(27,32,39,0.08)]",
-                "size-26",
-                "sm:size-28",
-                "lg:size-26 xl:size-28",
+                "rounded-full border",
+                "size-26 shadow-[0_10px_24px_rgba(27,32,39,0.08)]",
+                "sm:size-28 lg:size-26 xl:size-28",
                 isEven
-                  ? "border-[#31421f] bg-[#31421f] text-white"
-                  : "border-[#a8c453] bg-[#a8c453] text-white",
+                  ? "border-[#31421f] bg-[#31421f]"
+                  : "border-[#a8c453] bg-[#a8c453]",
               )}
             >
-              <div
+              <Image
+                src={iconSrc}
+                alt={iconAlt}
+                width={56}
+                height={56}
                 className={clsx(
-                  "flex",
-                  "items-center justify-center",
-                  "rounded-full",
-                  "size-13.5",
-                  "sm:size-14.5",
+                  "h-auto w-16 object-contain",
+                  "sm:w-[4.35rem]",
+                  "lg:w-16 xl:w-[4.35rem]",
                 )}
-              >
-                <Icon
-                  aria-hidden="true"
-                  className={clsx("stroke-[1.8]", "size-11 sm:size-12")}
-                />
-              </div>
+              />
             </div>
 
             <p
               className={clsx(
-                "mt-5 max-w-60 text-[18px] leading-[1.2]",
+                "mt-5 leading-[1.2]",
+                "max-w-60 text-[18px]",
                 "sm:max-w-64 sm:text-[19px]",
                 "lg:max-w-48 lg:text-[17px]",
                 "xl:max-w-52 xl:text-[18px]",
