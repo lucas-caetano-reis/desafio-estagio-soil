@@ -2,12 +2,14 @@ import Container from "@/components/Container";
 import Footer from "@/components/Footer";
 import HeroSection from "@/sections/HeroSection";
 import MarketSection from "@/sections/MarketSection";
+import WhySection from "@/sections/WhySection";
 
 export default function HomePage() {
   return (
     <Container>
       <HeroSection />
-      <main className="flex min-h-screen items-center justify-center">
+      <main className="flex w-full flex-col">
+        <WhySection />
         <MarketSection />
       </main>
       <Footer />
