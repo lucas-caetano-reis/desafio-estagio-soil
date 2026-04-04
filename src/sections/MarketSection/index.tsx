@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import Image from "next/image";
+import AppImage from "@/components/AppImage";
 
 const marketHighlights = [
   "34 mil pivôs no Brasil, crescendo 7% ao ano.",
@@ -79,15 +79,7 @@ export default function MarketSection() {
               "md:max-w-none",
             )}
           >
-            <Image
-              src="/images/telas_app.png"
-              alt={
-                "Telas do aplicativo Soil com mapas, históricos e indicadores de irrigação."
-              }
-              fill
-              sizes="(max-width: 767px) 100vw, (max-width: 1279px) 48vw, 700px"
-              className="object-contain"
-            />
+            <AppImage />
           </div>
         </div>
       </div>
