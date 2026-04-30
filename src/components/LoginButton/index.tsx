@@ -16,7 +16,7 @@ export default function LoginButton() {
         "bg-white transition-colors hover:bg-[#f3f3ed]",
       )}
     >
-      Login
+      <a href="https://pc.soiltech.com.br/"> Login </a>
     </button>
   );
 }
