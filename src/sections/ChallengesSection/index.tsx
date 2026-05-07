@@ -6,7 +6,7 @@ const challenges = [
     title: "Viagens",
     description: "só para ligar ou desligar pivôs?",
     iconAlt: "Ícone de deslocamento e localização.",
-    iconSrc: "/images/icone_caminho.png",
+    iconSrc: "/images/icone_caminho_preto.png",
   },
   {
     title: "Falhas detectadas tarde demais,",
@@ -18,7 +18,7 @@ const challenges = [
     title: "Irrigação em horários errados,",
     description: "elevando a conta de energia?",
     iconAlt: "Ícone de conta de luz.",
-    iconSrc: "/images/icone_conta_de_luz.png",
+    iconSrc: "/images/icone_conta_de_luz_preto.png",
   },
   {
     title: "Desperdício de água e energia",
