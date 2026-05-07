@@ -1,5 +1,6 @@
 import Container from "@/components/Container";
 import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 
 import HeroSection from "@/sections/HeroSection";
 import ChallengesSection from "@/sections/ChallengesSection";
@@ -12,8 +13,9 @@ import MarketSection from "@/sections/MarketSection";
 export default function HomePage() {
   return (
     <Container>
-      <HeroSection />
+      <Header />
       <main className="flex w-full flex-col">
+        <HeroSection />
         <ChallengesSection />
         <SolutionSection />
         <ProductsSection />
