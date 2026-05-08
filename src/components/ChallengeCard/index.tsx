@@ -20,11 +20,14 @@ export default function ChallengeCard({
         "group",
         "relative overflow-hidden text-left",
         "rounded-2xl border-b-4",
-        "bg-white shadow-[0_18px_45px_rgba(27,32,39,0.08)]",
+        "bg-white",
         "px-6 py-6",
         "sm:px-7 sm:py-7",
         "lg:min-h-33 lg:px-8",
-        "border-transparent transition-colors duration-200 hover:border-[#a8c453]",
+        "transition-all duration-200",
+        "border-transparent hover:border-[#a8c453]",
+        "shadow-xl hover:shadow-2xl",
+        "hover:-translate-y-1 hover:scale-101",
       )}
     >
       <div
