@@ -7,7 +7,6 @@ type ProductCardProps = {
   moreLabel: string;
   imageAlt: string;
   imageSrc: string;
-  titleClassName?: string;
 };
 
 export default function ProductCard({
@@ -16,17 +15,21 @@ export default function ProductCard({
   moreLabel,
   imageAlt,
   imageSrc,
-  titleClassName,
 }: Readonly<ProductCardProps>) {
   return (
-    <article
+    <div
       className={clsx(
-        "overflow-hidden rounded-[14px]",
-        "border border-[#e7e1d8] bg-white text-left",
-        "shadow-[0_18px_45px_rgba(27,32,39,0.08)]",
+        "group",
+        "overflow-hidden text-left",
+        "rounded-[14px] border-b-4",
+        "bg-white",
+        "transition-all duration-200",
+        "border-transparent hover:border-[#a8c453]",
+        "shadow-xl hover:shadow-2xl",
+        "hover:-translate-y-1 hover:scale-101",
       )}
     >
-      <div className="relative aspect-[1.45/1] w-full">
+      <figure className="relative aspect-[1.2/1] w-full">
         <Image
           src={imageSrc}
           alt={imageAlt}
@@ -34,7 +37,7 @@ export default function ProductCard({
           sizes="(max-width: 767px) 100vw, (max-width: 1279px) 50vw, 33vw"
           className="object-cover"
         />
-      </div>
+      </figure>
 
       <div
         className={clsx(
@@ -42,12 +45,11 @@ export default function ProductCard({
           "sm:min-h-38 sm:px-6 sm:pb-6 sm:pt-5",
         )}
       >
-        <div>
+        <article>
           <h3
             className={clsx(
               "text-[1.65rem] font-bold leading-[1.08] tracking-[-0.02em]",
-              "text-[#1b2027]",
-              titleClassName,
+              "text-[#1b2027] transition-colors duration-200 group-hover:text-[#a8c453]",
             )}
           >
             {title}
@@ -56,12 +58,12 @@ export default function ProductCard({
           <p className="mt-2 max-w-[28ch] text-[1rem] leading-[1.35] text-[#3e4349]">
             {description}
           </p>
-        </div>
+        </article>
 
         <span className="mt-auto pt-8 text-[1rem] font-semibold text-[#6b7076]">
           {moreLabel}
         </span>
       </div>
-    </article>
+    </div>
   );
 }

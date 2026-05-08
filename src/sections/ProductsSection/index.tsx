@@ -15,7 +15,6 @@ const products = [
     moreLabel: "Saiba mais",
     imageAlt: "Homem instalando um monitor em um equipamento agrícola",
     imageSrc: "/images/hero_background.jpg",
-    titleClassName: "text-[#a8c453]",
   },
   {
     title: "Pluviômetro automatizado:",
@@ -41,7 +40,7 @@ export default function ProductsSection() {
         <header className="text-center">
           <h2
             className={clsx(
-              "font-bold text-[2.35rem] text-[#1b2027]",
+              "font-bold text-[2.35rem]",
               "tracking-[-0.03em] leading-none",
               "sm:text-[3rem]",
               "lg:text-[3.35rem]",
