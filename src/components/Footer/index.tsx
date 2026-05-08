@@ -22,12 +22,7 @@ export default function Footer() {
         )}
       >
         <div className={clsx("max-w-2xl")}>
-          <h2
-            className={clsx(
-              "font-bold",
-              "text-3xl/snug md:text-4xl/snug",
-            )}
-          >
+          <h2 className={clsx("font-bold", "text-3xl/snug md:text-4xl/snug")}>
             Vamos transformar a sua irrigação?
           </h2>
 
@@ -43,7 +38,19 @@ export default function Footer() {
           </p>
         </div>
 
-        <DefaultButton>Fale com nossos especialistas</DefaultButton>
+        <DefaultButton
+          label="Fale com nossos especialistas"
+          title="Botão para entrar em contato os especialistas da Soil"
+          aria_label="Fale com nossos especialistas"
+          href="#contato"
+          className={clsx(
+            "w-full md:w-auto md:min-w-60",
+            "px-8 py-4",
+            "sm:text-[16px] md:text-[18px] lg:text-[20px]",
+            "font-bold text-white",
+            "bg-[#b7d256] transition-colors hover:bg-[#a8c247]",
+          )}
+        />
       </div>
     </footer>
   );

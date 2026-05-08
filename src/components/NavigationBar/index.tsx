@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import Link from "next/link";
 import SearchButton from "@/components/SearchButton";
-import LoginButton from "@/components/LoginButton";
+import DefaultButton from "../DefaultButton";
 
 const navigationItems = [
   { label: "Home +", href: "/" },
@@ -63,7 +63,18 @@ export default function NavigationBar() {
       >
         <SearchButton />
 
-        <LoginButton />
+        <DefaultButton
+          label="Login"
+          aria_label="Botão de Login"
+          title="Botão de Login"
+          href="https://pc.soiltech.com.br/"
+          className={clsx(
+            "min-w-28",
+            "px-8 py-3",
+            "font-bold text-[#2f3b1d]",
+            "bg-white transition-colors hover:bg-[#f3f3ed]",
+          )}
+        />
       </div>
     </div>
   );

@@ -74,10 +74,21 @@ export default function HeroSection() {
             className={clsx("mt-8 w-full sm:w-auto", "lg:mt-16", "xl:mt-20")}
           >
             <DefaultButton
-              className={clsx("md:min-w-0", "lg:min-w-92", "xl:min-w-90")}
-            >
-              Quero transformar minha irrigação
-            </DefaultButton>
+              label="Quero transformar minha irrigação"
+              aria_label="Quero transformar minha irrigação"
+              title="Descubra os produtos que irão transformar sua irrigação"
+              href="#produtos"
+              className={clsx(
+                "w-full md:w-auto",
+                "px-8 py-4",
+                "sm:text-[16px] md:text-[18px] lg:text-[20px]",
+                "font-bold text-white",
+                "bg-[#b7d256] transition-colors hover:bg-[#a8c247]",
+                "md:min-w-60",
+                "lg:min-w-92",
+                "xl:min-w-90",
+              )}
+            />
           </div>
         </div>
       </div>
