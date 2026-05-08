@@ -6,7 +6,6 @@ type ChallengeCardProps = {
   description: string;
   iconAlt: string;
   iconSrc: string;
-  isPrimary?: boolean;
 };
 
 export default function ChallengeCard({
@@ -14,24 +13,28 @@ export default function ChallengeCard({
   description,
   iconAlt,
   iconSrc,
-  isPrimary = false,
 }: Readonly<ChallengeCardProps>) {
   return (
-    <article
+    <div
       className={clsx(
+        "group",
         "relative overflow-hidden text-left",
         "rounded-2xl border-b-4",
         "bg-white shadow-[0_18px_45px_rgba(27,32,39,0.08)]",
         "px-6 py-6",
         "sm:px-7 sm:py-7",
         "lg:min-h-33 lg:px-8",
-        isPrimary ? "border-[#a8c453]" : "border-transparent",
+        "border-transparent transition-colors duration-200 hover:border-[#a8c453]",
       )}
     >
-      <div className="relative z-10 flex items-start gap-4 sm:gap-5">
-        <div
+      <div
+        className={clsx(
+          "relative z-10 flex items-center justify-between gap-4 sm:gap-5",
+        )}
+      >
+        <figure
           className={clsx(
-            "flex shrink-0 items-center justify-center rounded-full",
+            "flex shrink-0 items-center justify-center",
             "size-12 sm:size-14",
           )}
         >
@@ -42,36 +45,44 @@ export default function ChallengeCard({
             height={56}
             className="h-auto w-10 object-contain sm:w-12"
           />
-        </div>
+        </figure>
 
-        <div className="max-w-md">
+        <article className="flex-1">
           <h3
             className={clsx(
-              "text-[1.35rem] font-bold leading-[1.15]",
-              "sm:text-[1.55rem]",
-              isPrimary ? "text-[#a8c453]" : "text-[#1b2027]",
+              "text-[1.35rem] sm:text-[1.55rem]",
+              "font-bold leading-[1.15]",
+              "text-[#1b2027] transition-colors duration-200 group-hover:text-[#a8c453]",
             )}
           >
             {title}
           </h3>
 
-          <p className="mt-2 text-[1rem] leading-[1.45] text-[#5f5f5f] sm:text-[1.05rem]">
+          <p
+            className={clsx(
+              "mt-2 leading-[1.45]",
+              "text-[#5f5f5f] text-[1rem] sm:text-[1.05rem]",
+            )}
+          >
             {description}
           </p>
-        </div>
-      </div>
+        </article>
 
-      <Image
-        src={iconSrc}
-        alt=""
-        aria-hidden="true"
-        width={72}
-        height={72}
-        className={clsx(
-          "pointer-events-none absolute right-4 top-1/2 hidden -translate-y-1/2",
-          "opacity-[0.06] lg:block",
-        )}
-      />
-    </article>
+        <figure
+          className={clsx(
+            "flex shrink-0 items-center justify-center",
+            "size-12 sm:size-14",
+          )}
+        >
+          <Image
+            src={iconSrc}
+            alt={iconAlt}
+            width={56}
+            height={56}
+            className="h-auto w-10 object-contain sm:w-12 opacity-15"
+          />
+        </figure>
+      </div>
+    </div>
   );
 }

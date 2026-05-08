@@ -38,7 +38,7 @@ export default function ChallengesSection() {
   return (
     <section
       className={clsx(
-        "w-full bg-[#fffdf9] text-[#1b2027]",
+        "w-full bg-[#fffdf9]",
         "px-6 py-16",
         "sm:px-8 sm:py-20",
         "lg:px-16 lg:py-24",
@@ -46,10 +46,10 @@ export default function ChallengesSection() {
       )}
     >
       <div className="mx-auto flex flex-col w-full max-w-7xl items-center">
-        <header className="max-w-4xl text-center">
+        <header className="max-w-4xl text-center text-[#31421f]">
           <h2
             className={clsx(
-              "font-bold text-[#31421f]",
+              "font-bold",
               "leading-[1.05] tracking-tight",
               "text-[2.3rem]",
               "sm:text-[2.9rem]",
@@ -61,7 +61,7 @@ export default function ChallengesSection() {
 
           <p
             className={clsx(
-              "mt-4 leading-[1.2] text-[#31421f]",
+              "mt-4 leading-[1.2]",
               "text-[1.35rem]",
               "sm:text-[1.7rem]",
               "lg:text-[2rem]",
@@ -77,17 +77,16 @@ export default function ChallengesSection() {
             "lg:mt-16 lg:grid-cols-2 lg:gap-6",
           )}
         >
-          {challenges.map((challenge, index) => (
+          {challenges.map((challenge) => (
             <ChallengeCard
               key={challenge.title}
               {...challenge}
-              isPrimary={index === 0}
             />
           ))}
 
           <div
             className={clsx(
-              "flex items-center rounded-[1.75rem]",
+              "flex items-center",
               "px-2 py-3",
               "lg:px-6",
             )}
