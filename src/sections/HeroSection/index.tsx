@@ -21,49 +21,47 @@ export default function HeroSection() {
     >
       <div
         className={clsx(
-          "relative mx-auto xl:ml-0",
-          "w-full max-w-7xl",
-          "px-6 py-14",
-          "sm:px-8 sm:py-16",
-          "lg:px-16 lg:py-20",
-          "xl:px-16 xl:py-24",
+          "relative mx-auto",
+          "w-full",
+          "px-8 py-8",
+          "sm:px-12 sm:py-12",
+          "md:px-16 md:py-16",
+          "lg:px-20 lg:py-20",
+          "xl:px-24 xl:py-24",
         )}
       >
         <div
           className={clsx(
-            "max-w-84",
-            "sm:max-w-108",
-            "md:max-w-lg",
-            "lg:max-w-120",
-            "xl:max-w-125",
-            "xl:mr-auto",
+            "max-w-xs",
+            "sm:max-w-sm",
+            "md:max-w-md",
+            "lg:max-w-lg",
+            "xl:max-w-xl",
           )}
         >
           <h1
             className={clsx(
               "font-bold tracking-tight",
-              "text-[35px] leading-[1.04] text-white/92",
-              "sm:text-[51px]",
-              "md:text-[61px] md:leading-[1.02]",
-              "lg:text-[63px]",
-              "xl:text-[68px] xl:leading-[1.01]",
+              "text-2xl",
+              "sm:text-3xl",
+              "md:text-4xl",
+              "lg:text-5xl",
+              "xl:text-6xl",
             )}
           >
-            Irrigação inteligente
+            Irrigação inteligente em qualquer lugar.
             <br />
-            em qualquer lugar.
-            <br />
-            <em className="font-semibold italic">Mesmo sem internet.</em>
+            <em className="font-semibold italic"> Mesmo sem internet.</em>
           </h1>
 
           <p
             className={clsx(
-              "mt-5 max-w-[288px]",
-              "text-[16px] leading-[1.7] text-white/90",
-              "sm:mt-6 sm:max-w-88 sm:text-[18px]",
-              "md:max-w-100 md:text-[20px] md:leading-[1.45]",
-              "lg:max-w-84 lg:text-[18px]",
-              "xl:max-w-90 xl:text-[19px] xl:leading-[1.45]",
+              "mt-5",
+              "text-sm",
+              "sm:text-base",
+              "md:text-lg",
+              "lg:text-xl",
+              "xl:text-2xl"
             )}
           >
             Telemetria para pivôs com tecnologia que reduz custos e aumenta a
@@ -71,7 +69,7 @@ export default function HeroSection() {
           </p>
 
           <div
-            className={clsx("mt-8 w-full sm:w-auto", "lg:mt-16", "xl:mt-20")}
+            className={clsx("mt-8 w-full")}
           >
             <DefaultButton
               label="Quero transformar minha irrigação"
@@ -79,14 +77,11 @@ export default function HeroSection() {
               title="Descubra os produtos que irão transformar sua irrigação"
               href="#produtos"
               className={clsx(
-                "w-full md:w-auto",
-                "px-8 py-4",
-                "sm:text-[16px] md:text-[18px] lg:text-[20px]",
-                "font-bold text-white",
+                "w-auto",
+                "px-4 py-4",
+                "text-sm sm:text-base md:text-lg lg:text-xl",
+                "font-bold",
                 "bg-[#b7d256] transition-colors hover:bg-[#a8c247]",
-                "md:min-w-60",
-                "lg:min-w-92",
-                "xl:min-w-90",
               )}
             />
           </div>
