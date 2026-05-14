@@ -15,8 +15,7 @@ export default function Header() {
       <div
         className={clsx(
           "flex flex-col",
-          "lg:grid lg:grid-cols-[170px_minmax(0,1fr)]",
-          "xl:grid-cols-[186px_minmax(0,1fr)]",
+          "lg:grid lg:grid-cols-[160px_minmax(0,1fr)]",
         )}
       >
         <Logo />

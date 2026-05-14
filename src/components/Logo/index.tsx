@@ -6,30 +6,23 @@ export default function Logo() {
   return (
     <Link
       href="/"
-      aria-label="Ir para a página inicial da Soil"
-      title="Ir para a página inicial da Soil"
+      aria-label="Logomarca da Soil"
+      title="Logomarca da Soil"
       className={clsx(
-        "z-10",
-        "flex",
-        "w-fit lg:w-full",
-        "items-center justify-center",
-        "self-start",
+        "w-fit",
         "rounded-br-4xl",
         "bg-white",
-        "shadow-[0_8px_24px_rgba(0,0,0,0.12)]",
-        "px-6 py-4",
-        "sm:px-8",
-        "lg:min-h-22 lg:px-5 lg:py-4",
-        "xl:min-h-24.5 xl:px-7 xl:py-5",
+        "shadow-sm",
+        "px-4 py-4",
       )}
     >
       <Image
         src="/images/logo_soil.png"
         alt="Logo da Soil Tecnologia"
-        width={121}
-        height={57}
+        width={120}
+        height={60}
         priority
-        style={{ height: "auto", width: "auto" }}
+        style={{ width: "auto", height: "auto" }}
       />
     </Link>
   );
