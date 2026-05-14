@@ -31,12 +31,11 @@ export default function ContactBar() {
         "flex flex-wrap",
         "bg-[#a5bf55]",
         "items-center justify-center lg:justify-end",
-        "sm:text-[12px] md:text-[14px] lg:text-[16px]",
-        "font-medium tracking-[0.01em]",
+        "text-xs sm:text-sm md:text-base",
+        "font-medium",
         "gap-x-4 gap-y-2 px-4 py-2",
-        "sm:px-6",
-        "lg:gap-x-4 lg:px-5 lg:py-1.5",
-        "xl:gap-x-5 xl:px-8 xl:min-h-7",
+        "lg:gap-x-8 lg:px-6",
+        "xl:gap-x-12 xl:px-12",
       )}
     >
       {contactItems.map(({ label, href, icon: Icon }) => (
@@ -54,7 +53,7 @@ export default function ContactBar() {
         >
           <Icon
             className={clsx("h-3.5", "w-3.5", "shrink-0")}
-            strokeWidth={2.2}
+            strokeWidth={2}
           />
           <span>{label}</span>
         </a>
