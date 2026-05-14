@@ -27,6 +27,7 @@ const contactItems = [
 export default function ContactBar() {
   return (
     <div
+      aria-label="Informações de contato"
       className={clsx(
         "flex flex-wrap",
         "bg-[#a5bf55]",
@@ -48,7 +49,7 @@ export default function ContactBar() {
             "inline-flex",
             "items-center",
             "gap-1.5 leading-tight",
-            "transition-opacity hover:opacity-85",
+            "transition-opacity hover:opacity-85 focus:opacity-85 active:opacity-85",
           )}
         >
           <Icon

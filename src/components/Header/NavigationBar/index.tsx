@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import Link from "next/link";
 import SearchButton from "@/components/SearchButton";
-import DefaultButton from "../../DefaultButton";
+import DefaultButton from "@/components/DefaultButton";
 
 const navigationItems = [
   { label: "Home +", href: "/" },
@@ -16,24 +16,21 @@ const navigationItems = [
 export default function NavigationBar() {
   return (
     <div
+      aria-label="Barra de navegação"
       className={clsx(
         "flex flex-col lg:flex-row",
-        "sm:text-[12px] md:text-[14px] lg:text-[16px]",
-        "font-medium",
+        "text-xs sm:text-sm md:text-base",
         "gap-4 px-4 py-4",
-        "sm:px-6",
         "lg:items-center lg:justify-between",
-        "lg:gap-3 lg:px-5 lg:py-3",
-        "xl:gap-4 xl:px-10 xl:min-h-17.5",
+        "lg:px-8 xl:px-12",
       )}
     >
-      <nav aria-label="Navegação principal">
+      <nav aria-label="Atalhos para outras páginas">
         <ul
           className={clsx(
             "flex flex-wrap",
             "justify-center lg:justify-start",
-            "gap-x-4 gap-y-3",
-            "xl:gap-x-5",
+            "gap-x-4 sm:gap-x-8 md:gap-x-10 lg:gap-x-6 xl:gap-x-12",
           )}
         >
           {navigationItems.map(({ label, href }, index) => (
@@ -43,8 +40,8 @@ export default function NavigationBar() {
                 title={label}
                 href={href}
                 className={clsx(
-                  "transition-colors",
-                  index === 0 ? "font-bold" : "text-white/95 hover:text-white",
+                  "transition-opacity hover:opacity-85 focus:opacity-85 active:opacity-85",
+                  index === 0 ? "font-bold" : "font-medium",
                 )}
               >
                 {label}
@@ -55,24 +52,26 @@ export default function NavigationBar() {
       </nav>
 
       <div
+        aria-label="Botões de pesquisa e login"
         className={clsx(
           "flex",
           "items-center justify-center lg:justify-end",
-          "gap-3",
+          "gap-x-4",
         )}
       >
         <SearchButton />
 
         <DefaultButton
           label="Login"
-          aria_label="Botão de Login"
-          title="Botão de Login"
+          aria_label="Botão de login"
+          title="Botão de login"
           href="https://pc.soiltech.com.br/"
           className={clsx(
             "min-w-28",
-            "px-8 py-3",
+            "px-4 py-4",
             "font-bold text-[#2f3b1d]",
-            "bg-white transition-colors hover:bg-[#f3f3ed]",
+            "bg-white",
+            "transition-colors hover:bg-[#f3f3ed] focus:bg-[#f3f3ed] active:bg-[#f3f3ed]",
           )}
         />
       </div>
