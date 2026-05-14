@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import Link from "next/link";
 import SearchButton from "@/components/SearchButton";
-import DefaultButton from "../DefaultButton";
+import DefaultButton from "../../DefaultButton";
 
 const navigationItems = [
   { label: "Home +", href: "/" },
