@@ -42,19 +42,20 @@ export default function ChallengesSection() {
         "px-8 py-16",
         "sm:px-12 sm:py-20",
         "md:px-16 md:py-24",
-        "lg:px-20",
-        "xl:px-24",
+        "lg:px-24",
+        "xl:px-28",
       )}
     >
       <div className="mx-auto flex flex-col items-center">
         <header className="w-auto text-center text-[#31421f]">
           <h2
             className={clsx(
+              "font-bold",
               "leading-tight tracking-tight",
               "text-4xl lg:text-5xl",
             )}
           >
-            <strong>O Desafio no Campo</strong>
+            O Desafio no Campo
           </h2>
 
           <p

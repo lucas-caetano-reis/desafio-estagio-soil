@@ -15,30 +15,29 @@ export default function ChallengeCard({
   iconSrc,
 }: Readonly<ChallengeCardProps>) {
   return (
-    <div
+    <button
       className={clsx(
         "group",
-        "relative overflow-hidden text-left",
-        "rounded-2xl border-b-4",
+        "overflow-hidden",
+        "rounded-xl border-b-4",
         "bg-white",
         "px-6 py-6",
-        "sm:px-7 sm:py-7",
-        "lg:min-h-33 lg:px-8",
         "transition-all duration-200",
-        "border-transparent hover:border-[#a8c453]",
-        "shadow-xl hover:shadow-2xl",
-        "hover:-translate-y-1 hover:scale-101",
+        "border-transparent hover:border-[#a8c453] active:border-[#a8c453]",
+        "shadow-xl hover:shadow-2xl active:shadow-2xl",
+        "hover:-translate-y-1 active:-translate-y-1",
+        "hover:scale-101 active:scale-101",
       )}
     >
       <div
         className={clsx(
-          "relative z-10 flex items-center justify-between gap-4 sm:gap-5",
+          "z-10 flex items-center justify-between gap-4",
         )}
       >
         <figure
           className={clsx(
             "flex shrink-0 items-center justify-center",
-            "size-12 sm:size-14",
+            "size-12",
           )}
         >
           <Image
@@ -46,16 +45,17 @@ export default function ChallengeCard({
             alt={iconAlt}
             width={56}
             height={56}
-            className="h-auto w-10 object-contain sm:w-12"
+            className="object-contain h-auto w-10 sm:w-12"
           />
         </figure>
 
-        <article className="flex-1">
+        <article className="flex-1 text-left">
           <h3
             className={clsx(
-              "text-[1.35rem] sm:text-[1.55rem]",
-              "font-bold leading-[1.15]",
-              "text-[#1b2027] transition-colors duration-200 group-hover:text-[#a8c453]",
+              "text-xl",
+              "font-bold",
+              "text-[#1b2027] transition-colors duration-200",
+              "group-hover:text-[#a8c453] group-active:text-[#a8c453]",
             )}
           >
             {title}
@@ -63,8 +63,8 @@ export default function ChallengeCard({
 
           <p
             className={clsx(
-              "mt-2 leading-[1.45]",
-              "text-[#5f5f5f] text-[1rem] sm:text-[1.05rem]",
+              "mt-2",
+              "text-[#5f5f5f] text-base sm:text-lg",
             )}
           >
             {description}
@@ -74,7 +74,7 @@ export default function ChallengeCard({
         <figure
           className={clsx(
             "flex shrink-0 items-center justify-center",
-            "size-12 sm:size-14",
+            "size-12 xl:size-16",
           )}
         >
           <Image
@@ -82,10 +82,10 @@ export default function ChallengeCard({
             alt={iconAlt}
             width={56}
             height={56}
-            className="h-auto w-10 object-contain sm:w-12 opacity-15"
+            className="object-contain h-auto w-10 sm:w-12 xl:w-16 opacity-8"
           />
         </figure>
       </div>
-    </div>
+    </button>
   );
 }

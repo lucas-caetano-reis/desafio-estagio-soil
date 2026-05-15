@@ -12,7 +12,7 @@ export default function SearchButton() {
         "h-10 w-10",
         "items-center justify-center",
         "rounded-full",
-        "transition-colors hover:bg-white/10 focus:bg-white/10",
+        "transition-colors hover:bg-white/10 active:bg-white/10",
       )}
     >
       <SearchIcon className={clsx("h-4, w-4")} strokeWidth={2.3} />

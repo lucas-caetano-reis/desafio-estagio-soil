@@ -40,7 +40,7 @@ export default function NavigationBar() {
                 title={label}
                 href={href}
                 className={clsx(
-                  "transition-opacity hover:opacity-85 focus:opacity-85",
+                  "transition-opacity hover:opacity-85 active:opacity-85",
                   index === 0 ? "font-bold" : "font-medium",
                 )}
               >
@@ -71,7 +71,7 @@ export default function NavigationBar() {
             "px-4 py-4",
             "font-bold text-[#2f3b1d]",
             "bg-white",
-            "transition-colors hover:bg-[#f3f3ed] focus:bg-[#f3f3ed]",
+            "transition-colors hover:bg-[#f3f3ed] active:bg-[#f3f3ed]",
           )}
         />
       </div>

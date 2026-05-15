@@ -75,7 +75,7 @@ export default function HeroSection() {
                 "text-sm sm:text-base md:text-lg lg:text-xl",
                 "font-bold",
                 "bg-[#b7d256]",
-                "transition-colors hover:bg-[#a8c247] focus:bg-[#a8c247]",
+                "transition-colors hover:bg-[#a8c247] active:bg-[#a8c247]",
               )}
             />
           </div>

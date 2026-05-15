@@ -49,7 +49,7 @@ export default function ContactBar() {
             "inline-flex",
             "items-center",
             "gap-1.5 leading-tight",
-            "transition-opacity hover:opacity-85 focus:opacity-85",
+            "transition-opacity hover:opacity-85 active:opacity-85",
           )}
         >
           <Icon

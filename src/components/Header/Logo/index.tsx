@@ -14,7 +14,7 @@ export default function Logo() {
         "bg-white",
         "shadow-sm",
         "px-4 py-4",
-        "transition-colors hover:bg-[#f3f3ed] focus:bg-[#f3f3ed]",
+        "transition-colors hover:bg-[#f3f3ed] active:bg-[#f3f3ed]",
       )}
     >
       <Image
