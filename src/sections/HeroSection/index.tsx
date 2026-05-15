@@ -52,8 +52,7 @@ export default function HeroSection() {
           <p
             className={clsx(
               "mt-5",
-              "text-sm",
-              "sm:text-base",
+              "text-base",
               "md:text-lg",
               "lg:text-xl",
               "xl:text-2xl",
@@ -71,7 +70,7 @@ export default function HeroSection() {
               href="#produtos"
               className={clsx(
                 "w-auto",
-                "px-4 py-4",
+                "px-8 py-4",
                 "text-sm sm:text-base md:text-lg lg:text-xl",
                 "font-bold",
                 "bg-[#b7d256]",
