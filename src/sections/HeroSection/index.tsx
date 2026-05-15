@@ -6,22 +6,17 @@ export default function HeroSection() {
   return (
     <section
       className={clsx(
-        "relative overflow-hidden text-white",
-        "min-h-140 sm:min-h-155 lg:min-h-180 xl:min-h-195",
+        "overflow-hidden text-white",
+        "min-h-auto",
         "bg-[#2f6fa3]",
         "bg-[image:url('/images/hero_background.jpg')]",
         "bg-cover bg-no-repeat",
-        "bg-position-[60%_12%]",
-        "sm:bg-position-[62%_10%]",
-        "md:bg-position-[66%_12%]",
-        "lg:bg-position-[71%_16%]",
-        "xl:bg-position-[74%_18%]",
-        "2xl:bg-position-[76%_20%]",
+        "bg-position-[50%_25%]",
       )}
     >
       <div
         className={clsx(
-          "relative mx-auto",
+          "mx-auto",
           "w-full",
           "px-8 py-8",
           "sm:px-12 sm:py-12",
@@ -61,16 +56,14 @@ export default function HeroSection() {
               "sm:text-base",
               "md:text-lg",
               "lg:text-xl",
-              "xl:text-2xl"
+              "xl:text-2xl",
             )}
           >
             Telemetria para pivôs com tecnologia que reduz custos e aumenta a
             produtividade.
           </p>
 
-          <div
-            className={clsx("mt-8 w-full")}
-          >
+          <div className={clsx("mt-8 w-full")}>
             <DefaultButton
               label="Quero transformar minha irrigação"
               aria_label="Quero transformar minha irrigação"
@@ -81,7 +74,8 @@ export default function HeroSection() {
                 "px-4 py-4",
                 "text-sm sm:text-base md:text-lg lg:text-xl",
                 "font-bold",
-                "bg-[#b7d256] transition-colors hover:bg-[#a8c247]",
+                "bg-[#b7d256]",
+                "transition-colors hover:bg-[#a8c247] focus:bg-[#a8c247]",
               )}
             />
           </div>
