@@ -38,33 +38,29 @@ export default function ChallengesSection() {
   return (
     <section
       className={clsx(
-        "w-full bg-[#fffdf9]",
-        "px-6 py-16",
-        "sm:px-8 sm:py-20",
-        "lg:px-16 lg:py-24",
-        "xl:px-20 xl:py-28",
+        "bg-[#fffdf9]",
+        "px-8 py-16",
+        "sm:px-12 sm:py-20",
+        "md:px-16 md:py-24",
+        "lg:px-20",
+        "xl:px-24",
       )}
     >
-      <div className="mx-auto flex flex-col w-full max-w-7xl items-center">
-        <header className="max-w-4xl text-center text-[#31421f]">
+      <div className="mx-auto flex flex-col items-center">
+        <header className="w-auto text-center text-[#31421f]">
           <h2
             className={clsx(
-              "font-bold",
-              "leading-[1.05] tracking-tight",
-              "text-[2.3rem]",
-              "sm:text-[2.9rem]",
-              "lg:text-[3.5rem]",
+              "leading-tight tracking-tight",
+              "text-4xl lg:text-5xl",
             )}
           >
-            O Desafio no Campo
+            <strong>O Desafio no Campo</strong>
           </h2>
 
           <p
             className={clsx(
-              "mt-4 leading-[1.2]",
-              "text-[1.35rem]",
-              "sm:text-[1.7rem]",
-              "lg:text-[2rem]",
+              "mt-2 leading-tight",
+              "text-xl sm:text-2xl lg:text-3xl",
             )}
           >
             Você já perdeu tempo e dinheiro com:
@@ -73,8 +69,9 @@ export default function ChallengesSection() {
 
         <div
           className={clsx(
-            "w-full mt-12 grid grid-cols-1 gap-5",
-            "lg:mt-16 lg:grid-cols-2 lg:gap-6",
+            "mt-12",
+            "grid grid-cols-1 lg:grid-cols-2",
+            "gap-4 lg:gap-6",
           )}
         >
           {challenges.map((challenge) => (
@@ -84,25 +81,16 @@ export default function ChallengesSection() {
             />
           ))}
 
-          <div
+          <p
             className={clsx(
-              "flex items-center",
-              "px-2 py-3",
-              "lg:px-6",
+              "w-auto",
+              "px-6 py-6",
+              "text-[#a8c453] font-bold",
+              "text-3xl sm:text-4xl",
             )}
           >
-            <p
-              className={clsx(
-                "max-w-[18ch] text-left text-[2rem] font-bold leading-[1.1]",
-                "text-[#a8c453]",
-                "sm:text-[2.3rem]",
-                "lg:text-[2.7rem]",
-                "italic",
-              )}
-            >
-              A Soil nasceu para mudar essa realidade.
-            </p>
-          </div>
+            A Soil nasceu para <em>mudar essa realidade.</em>
+          </p>
         </div>
       </div>
     </section>
