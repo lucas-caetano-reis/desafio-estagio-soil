@@ -21,46 +21,50 @@ export default function ProductCard({
       className={clsx(
         "group",
         "overflow-hidden text-left",
-        "rounded-[14px] border-b-4",
+        "rounded-2xl border-b-4",
         "bg-white",
         "transition-all duration-200",
-        "border-transparent hover:border-[#a8c453]",
-        "shadow-xl hover:shadow-2xl",
-        "hover:-translate-y-1 hover:scale-101",
+        "border-transparent hover:border-[#a8c453] active:border-[#a8c453]",
+        "shadow-xl hover:shadow-2xl active:shadow-2xl",
+        "hover:-translate-y-1 active:-translate-y-1",
+        "hover:scale-101 active:scale-101",
       )}
     >
-      <figure className="relative aspect-[1.2/1] w-full">
+      <figure className="relative aspect-[1.2/1]">
         <Image
           src={imageSrc}
           alt={imageAlt}
           fill
-          sizes="(max-width: 767px) 100vw, (max-width: 1279px) 50vw, 33vw"
           className="object-cover"
+          sizes="(max-width: 767px) 100vw, (max-width: 1279px) 50vw, 33vw"
         />
       </figure>
 
       <div
         className={clsx(
-          "flex min-h-35.5 flex-col px-5 pb-5 pt-4",
-          "sm:min-h-38 sm:px-6 sm:pb-6 sm:pt-5",
+          "flex flex-col",
+          "px-4 sm:px-6",
+          "pb-4 sm:pb-6",
+          "pt-4 sm:pt-6",
         )}
       >
         <article>
           <h3
             className={clsx(
-              "text-[1.65rem] font-bold leading-[1.08] tracking-[-0.02em]",
-              "text-[#1b2027] transition-colors duration-200 group-hover:text-[#a8c453]",
+              "text-2xl font-bold tracking-tight",
+              "text-[#1b2027] transition-colors duration-200",
+              "group-hover:text-[#a8c453] group-active:text-[#a8c453]",
             )}
           >
             {title}
           </h3>
 
-          <p className="mt-2 max-w-[28ch] text-[1rem] leading-[1.35] text-[#3e4349]">
+          <p className="text-[#3e4349] text-base leading-snug mt-2">
             {description}
           </p>
         </article>
 
-        <span className="mt-auto pt-8 text-[1rem] font-semibold text-[#6b7076]">
+        <span className="text-[#6b7076] text-base font-semibold pt-8">
           {moreLabel}
         </span>
       </div>

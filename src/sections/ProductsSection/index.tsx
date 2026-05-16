@@ -29,21 +29,20 @@ export default function ProductsSection() {
   return (
     <section
       className={clsx(
-        "w-full bg-[#fffdf9] text-[#1b2027]",
-        "px-6 py-16",
-        "sm:px-8 sm:py-20",
+        "bg-[#fffdf9] text-[#1b2027]",
+        "px-8 py-16",
+        "sm:px-12 sm:py-20",
         "lg:px-16 lg:py-24",
-        "xl:px-20 xl:py-28",
+        "xl:px-20",
       )}
     >
-      <div className="mx-auto flex flex-col w-full max-w-7xl items-center">
+      <div className="mx-auto flex flex-col items-center max-w-7xl">
         <header className="text-center">
           <h2
             className={clsx(
-              "font-bold text-[2.35rem]",
-              "tracking-[-0.03em] leading-none",
-              "sm:text-[3rem]",
-              "lg:text-[3.35rem]",
+              "font-bold",
+              "leading-tight tracking-tight",
+              "text-4xl lg:text-5xl",
             )}
           >
             Conheça nossos produtos:
@@ -52,9 +51,9 @@ export default function ProductsSection() {
 
         <div
           className={clsx(
-            "mt-10 grid grid-cols-1 w-full gap-6",
-            "md:grid-cols-2",
-            "xl:mt-12 xl:grid-cols-3",
+            "mt-12",
+            "grid grid-cols-1 xl:grid-cols-3",
+            "gap-6",
           )}
         >
           {products.map((product) => (
