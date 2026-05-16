@@ -8,7 +8,6 @@ export default function Footer() {
         className={clsx(
           "flex flex-col md:flex-row",
           "justify-center items-center",
-          "w-full",
           "px-12 py-12",
           "md:px-16 lg:px-16",
           "gap-8",

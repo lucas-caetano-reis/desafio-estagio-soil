@@ -11,11 +11,10 @@ export default function SolutionsList() {
   return (
     <ol
       className={clsx(
-        "mt-10 space-y-5 pl-7",
-        "list-decimal",
-        "text-[18px] text-white font-semibold leading-tight",
-        "marker:font-bold marker:text-[#a5bf55]",
-        "sm:text-[20px]",
+        "mt-10 space-y-5 pl-6",
+        "list-decimal marker:font-bold marker:text-[#a5bf55]",
+        "text-white font-semibold leading-tight",
+        "text-lg lg:text-xl",
       )}
     >
       {solutions.map((solution) => (

@@ -6,26 +6,25 @@ export default function SolutionSection() {
   return (
     <section
       className={clsx(
-        "w-full bg-[#253517] text-white",
-        "px-6 py-16",
-        "sm:px-8 sm:py-20",
-        "lg:px-16 lg:py-24",
-        "xl:px-20 xl:py-28",
+        "bg-[#253517] text-white",
+        "px-8 py-16",
+        "sm:px-12 sm:py-20",
+        "md:px-16 lg:py-24",
+        "xl:px-20",
       )}
     >
       <div
         className={clsx(
-          "mx-auto flex flex-col w-full max-w-7xl gap-12",
-          "lg:flex-row lg:items-center lg:justify-between lg:gap-16",
-          "xl:gap-20",
+          "flex flex-col lg:flex-row",
+          "items-center justify-center",
+          "gap-12 lg:gap-16 xl:gap-20",
         )}
       >
-        <div className={clsx("max-w-xl", "lg:max-w-136", "xl:max-w-152")}>
+        <div>
           <div
             className={clsx(
               "flex items-center gap-3",
-              "text-[15px] text-[#a5bf55] font-semibold",
-              "sm:text-[16px]",
+              "text-base text-[#a5bf55] font-semibold",
             )}
           >
             <span className="h-px w-8 bg-[#a5bf55]" />
@@ -34,11 +33,7 @@ export default function SolutionSection() {
 
           <h2
             className={clsx(
-              "mt-5 font-bold text-[38px] text-white",
-              "tracking-tight leading-[1.05]",
-              "sm:text-[44px]",
-              "lg:text-[52px]",
-              "xl:text-[56px]",
+              "mt-5 font-bold text-4xl lg:text-5xl",
             )}
           >
             A Solução Soil
@@ -46,10 +41,9 @@ export default function SolutionSection() {
 
           <p
             className={clsx(
-              "mt-5 max-w-2xl text-white/92",
-              "text-[20px] leading-[1.3]",
-              "sm:text-[24px]",
-              "lg:max-w-lg lg:text-[26px]",
+              "mt-5 text-white/92",
+              "text-xl leading-tight",
+              "lg:max-w-lg lg:text-2xl",
             )}
           >
             Com a Soil, você controla seus pivôs de qualquer lugar, mesmo
