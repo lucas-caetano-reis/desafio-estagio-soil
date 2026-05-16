@@ -5,34 +5,26 @@ export default function AdvantagesSection() {
   return (
     <section
       className={clsx(
-        "w-full bg-white text-[#1b2027]",
-        "px-6 py-16",
-        "sm:px-8 sm:py-20",
-        "lg:px-16 lg:py-24",
-        "xl:px-20 xl:py-28",
+        "bg-[#fffdf9] text-[#1b2027]",
+        "px-8 py-16",
+        "sm:px-12 sm:py-20",
+        "md:px-16 md:py-24",
+        "lg:px-24",
+        "xl:px-28",
       )}
     >
-      <div
-        className={clsx(
-          "flex flex-col",
-          "items-center",
-          "mx-auto",
-          "w-full max-w-7xl",
-        )}
-      >
-        <h2
-          className={clsx(
-            "max-w-4xl",
-            "text-center font-bold",
-            "tracking-tight leading-[1.08]",
-            "text-[36px]",
-            "sm:text-[44px]",
-            "lg:text-[54px]",
-            "xl:text-[58px]",
-          )}
-        >
-          Benefícios reais para o produtor
-        </h2>
+      <div className="mx-auto flex flex-col items-center">
+        <header className="text-center">
+          <h2
+            className={clsx(
+              "font-bold",
+              "tracking-tight leading-tight",
+              "text-4xl lg:text-5xl",
+            )}
+          >
+            Benefícios reais para o produtor
+          </h2>
+        </header>
         <AdvantagesIcons />
       </div>
     </section>

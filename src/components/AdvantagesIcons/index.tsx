@@ -58,13 +58,10 @@ export default function AdvantagesIcons() {
   return (
     <div
       className={clsx(
-        "w-full sm:max-w-3xl lg:max-w-none",
         "mt-12 lg:mt-16",
         "grid grid-cols-2 lg:grid-cols-5",
-        "gap-x-6 gap-y-10",
-        "sm:gap-x-8",
-        "lg:gap-x-5 lg:gap-y-0",
-        "xl:gap-x-8",
+        "gap-x-4 gap-y-8",
+        "lg:gap-x-8 lg:gap-y-0",
       )}
     >
       {advantages.map(({ description, iconAlt, iconSrc }, index) => {
@@ -82,11 +79,10 @@ export default function AdvantagesIcons() {
           >
             <div
               className={clsx(
-                "flex relative",
+                "flex",
                 "items-center justify-center",
                 "rounded-full border",
-                "size-26 shadow-[0_10px_24px_rgba(27,32,39,0.08)]",
-                "sm:size-28 lg:size-26 xl:size-28",
+                "size-28 shadow-lg",
                 isEven
                   ? "border-[#31421f] bg-[#31421f]"
                   : "border-[#a8c453] bg-[#a8c453]",
@@ -97,26 +93,11 @@ export default function AdvantagesIcons() {
                 alt={iconAlt}
                 width={56}
                 height={56}
-                className={clsx(
-                  "h-auto w-16 object-contain",
-                  "sm:w-[4.35rem]",
-                  "lg:w-16 xl:w-[4.35rem]",
-                )}
+                className="h-auto w-16 object-contain"
               />
             </div>
 
-            <p
-              className={clsx(
-                "mt-5 leading-[1.2]",
-                "max-w-60 text-[18px]",
-                "sm:max-w-64 sm:text-[19px]",
-                "lg:max-w-48 lg:text-[17px]",
-                "xl:max-w-52 xl:text-[18px]",
-                "[&_strong]:font-extrabold",
-              )}
-            >
-              {description}
-            </p>
+            <p className="mt-5 max-w-60 text-lg leading-tight">{description}</p>
           </article>
         );
       })}
