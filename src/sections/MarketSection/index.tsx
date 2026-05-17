@@ -1,5 +1,6 @@
 import clsx from "clsx";
 import AppImage from "@/components/AppImage";
+import UnorderedList from "@/components/UnorderedList";
 
 const marketHighlights = [
   "34 mil pivôs no Brasil, crescendo 7% ao ano.",
@@ -45,20 +46,15 @@ export default function MarketSection() {
             A Soil acompanha a evolução do agro:
           </h2>
 
-          <ul
-            className={clsx(
+          <UnorderedList
+            items={marketHighlights}
+            classname={clsx(
               "mt-8 space-y-6 pl-6",
               "list-disc text-[#1f252c]/60",
               "font-semibold leading-tight",
               "text-sm sm:text-base md:text-lg lg:text-xl",
             )}
-          >
-            {marketHighlights.map((highlight) => (
-              <li key={highlight} className="pl-4">
-                <span>{highlight}</span>
-              </li>
-            ))}
-          </ul>
+          />
         </div>
 
         <AppImage />

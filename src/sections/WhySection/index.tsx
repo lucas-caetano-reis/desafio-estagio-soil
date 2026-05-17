@@ -1,5 +1,6 @@
 import clsx from "clsx";
 import FarmImage from "@/components/FarmImage";
+import UnorderedList from "@/components/UnorderedList";
 
 const whyHighlights = [
   "Funciona mesmo sem internet.",
@@ -39,20 +40,15 @@ export default function WhySection() {
             Por que escolher a Soil?
           </h2>
 
-          <ul
-            className={clsx(
+          <UnorderedList
+            items={whyHighlights}
+            classname={clsx(
               "mt-8 space-y-6 pl-6",
               "list-disc",
               "font-semibold leading-tight",
               "text-sm sm:text-base md:text-lg lg:text-xl",
             )}
-          >
-            {whyHighlights.map((highlight) => (
-              <li key={highlight} className="pl-4">
-                <span>{highlight}</span>
-              </li>
-            ))}
-          </ul>
+          />
         </div>
       </div>
     </section>
