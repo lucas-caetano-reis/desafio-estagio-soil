@@ -1,6 +1,13 @@
 import clsx from "clsx";
-import SolutionsList from "@/components/SolutionsList";
+import OrderedList from "@/components/OrderedList";
 import ClientImage from "@/components/ClientImage";
+
+const solutions = [
+  "Automação remota via aplicativo.",
+  "GPS e sensores embarcados.",
+  "Conectividade por Satélite, RádioLoRa, Wi-Fi ou redes móveis.",
+  "Plataforma intuitiva com suporte inteligente e proativo.",
+];
 
 export default function SolutionSection() {
   return (
@@ -51,7 +58,15 @@ export default function SolutionSection() {
             offline.
           </p>
 
-          <SolutionsList />
+          <OrderedList
+            items={solutions}
+            classname={clsx(
+              "mt-8 space-y-6 pl-6",
+              "marker:text-[#a5bf55]",
+              "font-semibold leading-tight",
+              "text-sm sm:text-base md:text-lg lg:text-xl",
+            )}
+          />
         </div>
 
         <ClientImage />
