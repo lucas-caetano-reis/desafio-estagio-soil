@@ -33,7 +33,7 @@ export default function SolutionSection() {
 
           <h2
             className={clsx(
-              "mt-5 font-bold",
+              "mt-5 font-bold leading-tight",
               "text-2xl sm:text-3xl md:text-4xl lg:text-5xl",
             )}
           >

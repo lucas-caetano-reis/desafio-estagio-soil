@@ -11,59 +11,50 @@ export default function MarketSection() {
   return (
     <section
       className={clsx(
-        "w-full bg-white",
-        "px-6 py-16",
-        "sm:px-8 sm:py-20",
-        "lg:px-16 lg:py-24",
-        "xl:px-20 xl:py-28",
+        "bg-white",
+        "px-8 py-16",
+        "sm:px-12 sm:py-20",
+        "md:px-16 lg:py-24",
+        "xl:px-20",
       )}
     >
       <div
         className={clsx(
-          "flex flex-col",
-          "mx-auto w-full max-w-7xl",
-          "gap-12",
-          "md:flex-row md:items-center md:justify-between md:gap-10",
-          "xl:gap-16",
+          "flex flex-col md:flex-row",
+          "items-center justify-center",
+          "gap-12 md:gap-16 xl:gap-20",
         )}
       >
-        <div className={clsx("max-w-xl", "md:max-w-115", "xl:max-w-125")}>
+        <div>
           <div
             className={clsx(
-              "flex items-center gap-3",
-              "text-[15px] font-semibold text-[#a5bf55]",
-              "sm:text-[16px]",
+              "flex items-center gap-2",
+              "text-base text-[#a5bf55] font-semibold",
             )}
           >
             <span className="h-px w-8 bg-[#a5bf55]" />
-            <span>{"Mercado e Presença"}</span>
+            <span>Mercado e Presença</span>
           </div>
 
           <h2
             className={clsx(
-              "mt-5 font-bold tracking-tight text-[#1f252c]",
-              "text-[38px] leading-[1.05]",
-              "sm:text-[44px]",
-              "lg:text-[52px]",
-              "xl:text-[56px]",
+              "mt-5 font-bold text-[#1f252c] leading-tight",
+              "text-2xl sm:text-3xl md:text-4xl lg:text-5xl",
             )}
           >
-            {"A Soil acompanha"}
-            <br />
-            {"a evolução do agro:"}
+            A Soil acompanha a evolução do agro:
           </h2>
 
           <ul
             className={clsx(
-              "mt-7 space-y-2",
-              "text-[17px] leading-[1.7] text-[#7a7f86]",
-              "sm:text-[18px]",
-              "lg:text-[19px]",
+              "mt-8 space-y-6 pl-6",
+              "list-disc text-[#1f252c]/60",
+              "font-semibold leading-tight",
+              "text-sm sm:text-base md:text-lg lg:text-xl",
             )}
           >
             {marketHighlights.map((highlight) => (
-              <li key={highlight} className="flex gap-3">
-                <span className="mt-[0.5em]">-</span>
+              <li key={highlight} className="pl-4">
                 <span>{highlight}</span>
               </li>
             ))}

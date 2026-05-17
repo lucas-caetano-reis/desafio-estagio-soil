@@ -13,7 +13,7 @@ export default function WhySection() {
   return (
     <section
       className={clsx(
-        "bg-[#aac55d] text-white",
+        "bg-[#aac55d]",
         "px-8 py-16",
         "sm:px-12 sm:py-20",
         "md:px-16 lg:py-24",
@@ -32,7 +32,7 @@ export default function WhySection() {
         <div className="text-left text-white">
           <h2
             className={clsx(
-              "font-bold",
+              "font-bold leading-tight",
               "text-2xl sm:text-3xl md:text-4xl lg:text-5xl",
             )}
           >
