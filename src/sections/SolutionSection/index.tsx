@@ -23,7 +23,7 @@ export default function SolutionSection() {
         <div>
           <div
             className={clsx(
-              "flex items-center gap-3",
+              "flex items-center gap-2",
               "text-base text-[#a5bf55] font-semibold",
             )}
           >
@@ -33,7 +33,8 @@ export default function SolutionSection() {
 
           <h2
             className={clsx(
-              "mt-5 font-bold text-4xl lg:text-5xl",
+              "mt-5 font-bold",
+              "text-2xl sm:text-3xl md:text-4xl lg:text-5xl",
             )}
           >
             A Solução Soil
@@ -42,8 +43,8 @@ export default function SolutionSection() {
           <p
             className={clsx(
               "mt-5 text-white/92",
-              "text-xl leading-tight",
-              "lg:max-w-lg lg:text-2xl",
+              "text-base sm:text-lg md:text-xl lg:text-2xl leading-tight",
+              "lg:max-w-lg",
             )}
           >
             Com a Soil, você controla seus pivôs de qualquer lugar, mesmo
