@@ -21,7 +21,7 @@ export default function MarketSection() {
     >
       <div
         className={clsx(
-          "flex flex-col md:flex-row",
+          "flex flex-col lg:flex-row",
           "items-center justify-center",
           "gap-12 md:gap-16 xl:gap-20",
         )}
@@ -40,7 +40,7 @@ export default function MarketSection() {
           <h2
             className={clsx(
               "mt-5 font-bold text-[#1f252c] leading-tight",
-              "text-2xl sm:text-3xl md:text-4xl lg:text-5xl",
+              "text-2xl sm:text-3xl md:text-4xl xl:text-5xl",
             )}
           >
             A Soil acompanha a evolução do agro:

@@ -6,16 +6,16 @@ export default function AppImage() {
     <div
       className={clsx(
         "w-full",
-        "relative aspect-1.25/1 overflow-hidden",
-        "max-w-135 md:max-w-155 xl:max-w-175",
+        "max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-3xl",
+        "aspect-2/1 overflow-hidden",
       )}
     >
       <Image
         src="/images/telas_app.png"
         alt="Telas do aplicativo Soil com mapas, históricos e indicadores de irrigação."
-        fill
-        className="object-contain"
-        sizes="(max-width: 767px) 100vw, (max-width: 1279px) 48vw, 700px"
+        width={768}
+        height={384}
+        className="w-full h-full object-contain"
       />
     </div>
   );

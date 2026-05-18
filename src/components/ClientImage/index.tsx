@@ -14,9 +14,9 @@ export default function ClientImage() {
       <Image
         src="/images/cliente.png"
         alt="Cliente usando o aplicativo da Soil no campo"
-        width={312}
-        height={312}
-        className="h-full w-full object-cover object-center"
+        width={512}
+        height={512}
+        className="w-full h-full object-cover object-center"
       />
     </div>
   );
