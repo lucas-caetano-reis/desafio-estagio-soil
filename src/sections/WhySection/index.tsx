@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import FarmImage from "@/components/FarmImage";
+import SectionImages from "@/components/SectionImages";
 import UnorderedList from "@/components/UnorderedList";
 
 const whyHighlights = [
@@ -28,7 +28,19 @@ export default function WhySection() {
           "gap-12 lg:gap-16 xl:gap-20",
         )}
       >
-        <FarmImage />
+        <SectionImages
+          src="/images/fazenda_conectada.png"
+          alt="Ilustração de uma fazenda conectada com sensores, nuvem e monitoramento remoto."
+          width={512}
+          height={394}
+          classname={clsx(
+            "bg-[#71d98d]",
+            "max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg",
+            "aspect-512/394",
+            "rounded-4xl shadow-2xl",
+          )}
+          imageClassname="object-cover object-center"
+        />
 
         <div className="text-left text-white">
           <h2

@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import AppImage from "@/components/AppImage";
+import SectionImages from "@/components/SectionImages";
 import UnorderedList from "@/components/UnorderedList";
 
 const marketHighlights = [
@@ -57,7 +57,17 @@ export default function MarketSection() {
           />
         </div>
 
-        <AppImage />
+        <SectionImages
+          src="/images/telas_app.png"
+          alt="Telas do aplicativo Soil com mapas, históricos e indicadores de irrigação."
+          width={768}
+          height={384}
+          classname={clsx(
+            "max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-3xl",
+            "aspect-2/1",
+          )}
+          imageClassname="object-contain"
+        />
       </div>
     </section>
   );
