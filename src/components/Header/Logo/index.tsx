@@ -22,8 +22,7 @@ export default function Logo() {
         alt="Logo da Soil Tecnologia"
         width={120}
         height={60}
-        priority
-        style={{ width: "auto", height: "auto" }}
+        className="w-full h-auto"
       />
     </Link>
   );

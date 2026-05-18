@@ -38,56 +38,57 @@ export default function ChallengesSection() {
   return (
     <section
       className={clsx(
+        "flex flex-col",
         "bg-[#fffdf9]",
-        "px-8 py-16",
-        "sm:px-12 sm:py-20",
-        "md:px-16 md:py-24",
-        "lg:px-24",
-        "xl:px-28",
+        "px-8 py-8",
+        "sm:px-12 sm:py-10",
+        "md:px-16 md:py-12",
+        "lg:px-20 lg:py-14",
+        "xl:px-24 xl:py-16",
       )}
     >
-      <div className="mx-auto flex flex-col items-center">
-        <header className="w-auto text-center text-[#31421f]">
-          <h2
-            className={clsx(
-              "font-bold",
-              "leading-tight tracking-tight",
-              "text-4xl lg:text-5xl",
-            )}
-          >
-            O Desafio no Campo
-          </h2>
+      <header className="text-center text-[#31421f]">
+        <h2
+          className={clsx(
+            "font-bold leading-tight tracking-tight",
+            "text-2xl sm:text-3xl md:text-4xl xl:text-5xl",
+          )}
+        >
+          O Desafio no Campo
+        </h2>
 
-          <p
-            className={clsx(
-              "mt-2 leading-tight",
-              "text-xl sm:text-2xl lg:text-3xl",
-            )}
-          >
-            Você já perdeu tempo e dinheiro com:
-          </p>
-        </header>
+        <h3
+          className={clsx(
+            "mt-2 leading-tight",
+            "text-xl sm:text-2xl md:text-3xl",
+          )}
+        >
+          Você já perdeu tempo e dinheiro com:
+        </h3>
+      </header>
+
+      <div
+        className={clsx(
+          "mt-12",
+          "grid grid-cols-1 lg:grid-cols-2",
+          "gap-4 lg:gap-6",
+        )}
+      >
+        {challenges.map((challenge) => (
+          <ChallengeCard key={challenge.title} {...challenge} />
+        ))}
 
         <div
           className={clsx(
-            "mt-12",
-            "grid grid-cols-1 lg:grid-cols-2",
-            "gap-4 lg:gap-6",
+            "flex items-center",
+            "rounded-xl border-b-4 border-transparent",
+            "px-6 py-6",
           )}
         >
-          {challenges.map((challenge) => (
-            <ChallengeCard
-              key={challenge.title}
-              {...challenge}
-            />
-          ))}
-
           <p
             className={clsx(
-              "w-auto",
-              "px-6 py-6",
               "text-[#a8c453] font-bold",
-              "text-3xl sm:text-4xl",
+              "text-xl sm:text-2xl md:text-3xl lg:text-4xl",
             )}
           >
             A Soil nasceu para <em>mudar essa realidade.</em>

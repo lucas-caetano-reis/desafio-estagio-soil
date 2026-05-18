@@ -7,7 +7,6 @@ export default function HeroSection() {
     <section
       className={clsx(
         "overflow-hidden text-white",
-        "min-h-auto",
         "bg-[#2f6fa3]",
         "bg-[image:url('/images/hero_background.jpg')]",
         "bg-cover bg-no-repeat",
@@ -16,8 +15,11 @@ export default function HeroSection() {
     >
       <div
         className={clsx(
-          "mx-auto",
-          "w-full",
+          "max-w-sm",
+          "sm:max-w-md",
+          "md:max-w-lg",
+          "lg:max-w-xl",
+          "xl:max-w-2xl",
           "px-8 py-8",
           "sm:px-12 sm:py-12",
           "md:px-16 md:py-16",
@@ -25,60 +27,43 @@ export default function HeroSection() {
           "xl:px-24 xl:py-24",
         )}
       >
-        <div
+        <h1
           className={clsx(
-            "max-w-xs",
-            "sm:max-w-sm",
-            "md:max-w-md",
-            "lg:max-w-lg",
-            "xl:max-w-xl",
+            "font-bold leading-tight tracking-tight",
+            "text-2xl sm:text-3xl md:text-4xl xl:text-5xl",
           )}
         >
-          <h1
-            className={clsx(
-              "font-bold tracking-tight",
-              "text-2xl",
-              "sm:text-3xl",
-              "md:text-4xl",
-              "lg:text-5xl",
-              "xl:text-6xl",
-            )}
-          >
-            Irrigação inteligente em qualquer lugar.
-            <br />
-            <em className="font-semibold italic"> Mesmo sem internet.</em>
-          </h1>
+          Irrigação inteligente em qualquer lugar.
+          <br />
+          <em className="font-semibold italic"> Mesmo sem internet.</em>
+        </h1>
 
-          <p
-            className={clsx(
-              "mt-5",
-              "text-base",
-              "md:text-lg",
-              "lg:text-xl",
-              "xl:text-2xl",
-            )}
-          >
-            Telemetria para pivôs com tecnologia que reduz custos e aumenta a
-            produtividade.
-          </p>
+        <p
+          className={clsx(
+            "mt-5 leading-tight",
+            "text-base sm:text-lg md:text-xl lg:text-2xl",
+          )}
+        >
+          Telemetria para pivôs com tecnologia que reduz custos e aumenta a
+          produtividade.
+        </p>
 
-          <div className={clsx("mt-8 w-full")}>
-            <DefaultButton
-              label="Quero transformar minha irrigação"
-              aria_label="Quero transformar minha irrigação"
-              title="Descubra os produtos que irão transformar sua irrigação"
-              href="#produtos"
-              className={clsx(
-                "w-auto",
-                "px-8 py-4",
-                "text-sm sm:text-base md:text-lg lg:text-xl",
-                "font-bold",
-                "bg-[#b7d256]",
-                "transition-colors hover:bg-[#a8c247] active:bg-[#a8c247]",
-              )}
-            />
-          </div>
-        </div>
+        <DefaultButton
+          label="Quero transformar minha irrigação"
+          aria_label="Quero transformar minha irrigação"
+          title="Descubra os produtos que irão transformar sua irrigação"
+          href="#produtos"
+          className={clsx(
+            "mt-8",
+            "px-4 py-2",
+            "sm:px-6 sm:py-3",
+            "md:px-8 md:py-4",
+            "font-bold",
+            "text-sm sm:text-base md:text-lg lg:text-xl",
+            "bg-[#b7d256]",
+            "transition-colors hover:bg-[#a8c247] active:bg-[#a8c247]",
+          )}
+        />
       </div>
     </section>
   );

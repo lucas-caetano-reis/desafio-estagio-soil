@@ -13,76 +13,69 @@ export default function SolutionSection() {
   return (
     <section
       className={clsx(
+        "flex flex-col lg:flex-row",
+        "items-center justify-center",
         "bg-[#253517] text-white",
-        "px-8 py-16",
-        "sm:px-12 sm:py-20",
-        "md:px-16 lg:py-24",
-        "xl:px-20",
+        "gap-12 lg:gap-16 xl:gap-20",
+        "px-8 py-8",
+        "sm:px-12 sm:py-10",
+        "md:px-16 md:py-12",
+        "lg:px-20 lg:py-14",
       )}
     >
-      <div
-        className={clsx(
-          "flex flex-col lg:flex-row",
-          "items-center justify-center",
-          "gap-12 lg:gap-16 xl:gap-20",
-        )}
-      >
-        <div>
-          <div
-            className={clsx(
-              "flex items-center gap-2",
-              "text-base text-[#a5bf55] font-semibold",
-            )}
-          >
-            <span className="h-px w-8 bg-[#a5bf55]" />
-            <span>Conectividade total + inteligência artificial</span>
-          </div>
-
-          <h2
-            className={clsx(
-              "mt-5 font-bold leading-tight",
-              "text-2xl sm:text-3xl md:text-4xl lg:text-5xl",
-            )}
-          >
-            A Solução Soil
-          </h2>
-
-          <p
-            className={clsx(
-              "mt-5 text-white/92",
-              "text-base sm:text-lg md:text-xl lg:text-2xl leading-tight",
-              "lg:max-w-lg",
-            )}
-          >
-            Com a Soil, você controla seus pivôs de qualquer lugar, mesmo
-            offline.
-          </p>
-
-          <OrderedList
-            items={solutions}
-            classname={clsx(
-              "mt-8 space-y-6 pl-6",
-              "marker:text-[#a5bf55]",
-              "font-semibold leading-tight",
-              "text-sm sm:text-base md:text-lg lg:text-xl",
-            )}
-          />
+      <div>
+        <div
+          className={clsx(
+            "flex items-center gap-2",
+            "text-base text-[#a5bf55] font-semibold",
+          )}
+        >
+          <span className="h-px w-8 bg-[#a5bf55]" />
+          <span>Conectividade total + inteligência artificial</span>
         </div>
 
-        <SectionImages
-          src="/images/cliente.png"
-          alt="Cliente usando o aplicativo da Soil no campo"
-          width={512}
-          height={512}
-          classname={clsx(
-            "bg-[#31431f]",
-            "max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg",
-            "aspect-square",
-            "rounded-4xl border-4 border-[#a5bf55]/90",
+        <h2
+          className={clsx(
+            "mt-5 font-bold leading-tight",
+            "text-2xl sm:text-3xl md:text-4xl xl:text-5xl",
           )}
-          imageClassname="object-cover object-center"
+        >
+          A Solução Soil
+        </h2>
+
+        <p
+          className={clsx(
+            "mt-5 text-white/92 leading-tight",
+            "text-base sm:text-lg md:text-xl lg:text-2xl",
+          )}
+        >
+          Com a Soil, você controla seus pivôs de qualquer lugar, mesmo offline.
+        </p>
+
+        <OrderedList
+          items={solutions}
+          classname={clsx(
+            "mt-8 space-y-6 pl-6",
+            "marker:text-[#a5bf55]",
+            "font-semibold leading-tight",
+            "text-sm sm:text-base md:text-lg lg:text-xl",
+          )}
         />
       </div>
+
+      <SectionImages
+        src="/images/cliente.png"
+        alt="Cliente usando o aplicativo da Soil no campo"
+        width={512}
+        height={512}
+        classname={clsx(
+          "bg-[#31431f]",
+          "max-w-2xs sm:max-w-xs md:max-w-sm lg:max-w-md",
+          "aspect-512/512",
+          "rounded-4xl border-4 border-[#a5bf55]/90",
+        )}
+        imageClassname="object-cover object-center"
+      />
     </section>
   );
 }

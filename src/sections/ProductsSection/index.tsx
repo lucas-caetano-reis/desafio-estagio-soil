@@ -29,37 +29,30 @@ export default function ProductsSection() {
   return (
     <section
       className={clsx(
+        "mx-auto flex flex-col items-center",
         "bg-[#fffdf9] text-[#1b2027]",
-        "px-8 py-16",
-        "sm:px-12 sm:py-20",
-        "lg:px-16 lg:py-24",
-        "xl:px-20",
+        "px-8 py-8",
+        "sm:px-12 sm:py-10",
+        "md:px-16 md:py-12",
+        "lg:px-20 lg:py-14",
       )}
     >
-      <div className="mx-auto flex flex-col items-center max-w-7xl">
-        <header className="text-center">
-          <h2
-            className={clsx(
-              "font-bold",
-              "leading-tight tracking-tight",
-              "text-4xl lg:text-5xl",
-            )}
-          >
-            Conheça nossos produtos:
-          </h2>
-        </header>
-
-        <div
+      <header>
+        <h2
           className={clsx(
-            "mt-12",
-            "grid grid-cols-1 xl:grid-cols-3",
-            "gap-6",
+            "text-center",
+            "font-bold tracking-tight leading-tight",
+            "text-2xl sm:text-3xl md:text-4xl xl:text-5xl",
           )}
         >
-          {products.map((product) => (
-            <ProductCard key={product.title} {...product} />
-          ))}
-        </div>
+          Conheça nossos produtos:
+        </h2>
+      </header>
+
+      <div className={clsx("mt-12", "flex flex-col lg:flex-row", "gap-6")}>
+        {products.map((product) => (
+          <ProductCard key={product.title} {...product} />
+        ))}
       </div>
     </section>
   );

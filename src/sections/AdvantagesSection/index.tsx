@@ -5,28 +5,26 @@ export default function AdvantagesSection() {
   return (
     <section
       className={clsx(
+        "mx-auto flex flex-col items-center",
         "bg-[#fffdf9] text-[#1b2027]",
-        "px-8 py-16",
-        "sm:px-12 sm:py-20",
-        "md:px-16 md:py-24",
-        "lg:px-24",
-        "xl:px-28",
+        "px-8 py-8",
+        "sm:px-12 sm:py-10",
+        "md:px-16 md:py-12",
+        "lg:px-20 lg:py-14",
       )}
     >
-      <div className="mx-auto flex flex-col items-center">
-        <header className="text-center">
-          <h2
-            className={clsx(
-              "font-bold",
-              "tracking-tight leading-tight",
-              "text-4xl lg:text-5xl",
-            )}
-          >
-            Benefícios reais para o produtor
-          </h2>
-        </header>
-        <AdvantagesIcons />
-      </div>
+      <header>
+        <h2
+          className={clsx(
+            "text-center",
+            "font-bold tracking-tight leading-tight",
+            "text-2xl sm:text-3xl md:text-4xl xl:text-5xl",
+          )}
+        >
+          Benefícios reais para o produtor
+        </h2>
+      </header>
+      <AdvantagesIcons />
     </section>
   );
 }
