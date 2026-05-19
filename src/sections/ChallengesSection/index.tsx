@@ -39,6 +39,7 @@ export default function ChallengesSection() {
     <section
       className={clsx(
         "flex flex-col",
+        "items-center",
         "bg-[#fffdf9]",
         "px-8 py-8",
         "sm:px-12 sm:py-10",
@@ -47,7 +48,7 @@ export default function ChallengesSection() {
         "xl:px-24 xl:py-16",
       )}
     >
-      <header className="text-center text-[#31421f]">
+      <header className="text-center text-[#1b2027]">
         <h2
           className={clsx(
             "font-bold leading-tight tracking-tight",
@@ -82,7 +83,9 @@ export default function ChallengesSection() {
           className={clsx(
             "flex items-center",
             "rounded-xl border-b-4 border-transparent",
-            "px-6 py-6",
+            "px-4 py-2",
+            "md:py-4",
+            "xl:px-6 xl:py-6",
           )}
         >
           <p

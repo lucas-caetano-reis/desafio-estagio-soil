@@ -26,10 +26,10 @@ export default function MarketSection() {
         <div
           className={clsx(
             "flex items-center gap-2",
-            "text-base text-[#a5bf55] font-semibold",
+            "text-sm sm:text-base text-[#a5bf55] font-semibold",
           )}
         >
-          <span className="h-px w-8 bg-[#a5bf55]" />
+          <span className="h-px w-4 sm:w-6 bg-[#a5bf55]" />
           <span>Mercado e Presença</span>
         </div>
 

@@ -31,7 +31,7 @@ export default function WhySection() {
         height={394}
         classname={clsx(
           "bg-[#71d98d]",
-          "max-w-2xs sm:max-w-xs md:max-w-sm lg:max-w-md",
+          "max-w-3xs sm:max-w-2xs md:max-w-xs lg:max-w-sm xl:max-w-md",
           "aspect-512/394",
           "rounded-4xl shadow-2xl",
         )}

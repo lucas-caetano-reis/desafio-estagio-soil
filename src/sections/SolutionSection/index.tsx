@@ -27,10 +27,10 @@ export default function SolutionSection() {
         <div
           className={clsx(
             "flex items-center gap-2",
-            "text-base text-[#a5bf55] font-semibold",
+            "text-sm sm:text-base text-[#a5bf55] font-semibold",
           )}
         >
-          <span className="h-px w-8 bg-[#a5bf55]" />
+          <span className="h-px w-4 sm:w-6 bg-[#a5bf55]" />
           <span>Conectividade total + inteligência artificial</span>
         </div>
 
@@ -70,7 +70,7 @@ export default function SolutionSection() {
         height={512}
         classname={clsx(
           "bg-[#31431f]",
-          "max-w-2xs sm:max-w-xs md:max-w-sm lg:max-w-md",
+          "max-w-3xs sm:max-w-2xs md:max-w-xs lg:max-w-sm xl:max-w-md",
           "aspect-512/512",
           "rounded-4xl border-4 border-[#a5bf55]/90",
         )}
