@@ -38,8 +38,7 @@ export default function ChallengesSection() {
   return (
     <section
       className={clsx(
-        "flex flex-col",
-        "items-center",
+        "flex flex-col items-center",
         "bg-[#fffdf9]",
         "px-8 py-8",
         "sm:px-12 sm:py-10",
@@ -83,8 +82,7 @@ export default function ChallengesSection() {
           className={clsx(
             "flex items-center",
             "rounded-xl border-b-4 border-transparent",
-            "px-4 py-2",
-            "md:py-4",
+            "px-4 py-4",
             "xl:px-6 xl:py-6",
           )}
         >
