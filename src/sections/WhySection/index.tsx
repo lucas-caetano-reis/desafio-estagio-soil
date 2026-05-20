@@ -38,7 +38,7 @@ export default function WhySection() {
         imageClassname="object-cover object-center"
       />
 
-      <div className="text-left text-white">
+      <article className="text-left text-white">
         <h2
           className={clsx(
             "font-bold leading-tight",
@@ -57,7 +57,7 @@ export default function WhySection() {
             "text-sm sm:text-base md:text-lg lg:text-xl",
           )}
         />
-      </div>
+      </article>
     </section>
   );
 }

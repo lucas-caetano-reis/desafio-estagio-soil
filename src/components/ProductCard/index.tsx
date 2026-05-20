@@ -15,10 +15,11 @@ export default function ProductCard({
   imageSrc,
 }: Readonly<ProductCardProps>) {
   return (
-    <div
+    <article
       className={clsx(
-        "max-w-3xs sm:max-w-2xs md:max-w-xs lg:max-w-sm",
         "group",
+        "flex flex-col",
+        "w-full max-w-3xs sm:max-w-2xs md:max-w-xs lg:max-w-sm",
         "overflow-hidden text-left",
         "rounded-2xl border-b-4",
         "bg-white",
@@ -29,7 +30,7 @@ export default function ProductCard({
         "hover:scale-101 active:scale-101",
       )}
     >
-      <figure className="aspect-384/320">
+      <figure className="aspect-384/320 w-full overflow-hidden">
         <Image
           src={imageSrc}
           alt={imageAlt}
@@ -41,41 +42,42 @@ export default function ProductCard({
 
       <div
         className={clsx(
-          "flex flex-col",
+          "flex flex-1 flex-col",
           "px-4 pb-4 pt-4",
           "xl:px-6 xl:pb-6 xl:pt-6",
         )}
       >
-        <article>
-          <h3
-            className={clsx(
-              "text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl",
-              "font-bold text-[#1b2027] transition-colors duration-200",
-              "group-hover:text-[#a8c453] group-active:text-[#a8c453]",
-            )}
-          >
-            {title}
-          </h3>
+        <h3
+          className={clsx(
+            "text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl",
+            "font-bold text-[#1b2027] transition-colors duration-200",
+            "group-hover:text-[#a8c453] group-active:text-[#a8c453]",
+          )}
+        >
+          {title}
+        </h3>
 
-          <p
-            className={clsx(
-              "mt-2 leading-tight text-[#3e4349]",
-              "text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl",
-            )}
-          >
-            {description}
-          </p>
-        </article>
+        <p
+          className={clsx(
+            "mt-2 leading-tight text-[#1b2027]/80",
+            "text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl",
+          )}
+        >
+          {description}
+        </p>
 
         <span
           className={clsx(
-            "pt-8 font-semibold text-[#6b7076]",
+            "mt-auto pt-8 font-semibold text-[#1b2027]/70",
             "text-[10px] sm:text-xs md:text-sm lg:text-base xl:text-lg",
+            "transition-opacity duration-200",
+            "hover:text-[#1b2027]/50 active:text-[#1b2027]/50",
+            "cursor-pointer",
           )}
         >
           Saiba mais
         </span>
       </div>
-    </div>
+    </article>
   );
 }

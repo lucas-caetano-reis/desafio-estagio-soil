@@ -15,12 +15,14 @@ export default function ChallengeCard({
   iconSrc,
 }: Readonly<ChallengeCardProps>) {
   return (
-    <button
+    <article
       className={clsx(
         "group",
+        "flex flex-row items-center justify-between",
         "overflow-hidden",
         "rounded-xl border-b-4",
         "bg-white",
+        "gap-4",
         "px-4 py-4",
         "xl:px-6 xl:py-6",
         "transition-all duration-200",
@@ -28,60 +30,59 @@ export default function ChallengeCard({
         "shadow-xl hover:shadow-2xl active:shadow-2xl",
         "hover:-translate-y-1 active:-translate-y-1",
         "hover:scale-101 active:scale-101",
+        "cursor-pointer",
       )}
     >
-      <div className={clsx("flex items-center justify-between gap-4")}>
-        <figure
+      <figure
+        className={clsx(
+          "flex items-center justify-center",
+          "aspect-48/48 size-6 sm:size-8 md:size-10 lg:size-12",
+        )}
+      >
+        <Image
+          src={iconSrc}
+          alt={iconAlt}
+          width={48}
+          height={48}
+          className="w-full h-auto object-cover"
+        />
+      </figure>
+
+      <div className="flex flex-1 flex-col text-left">
+        <h4
           className={clsx(
-            "flex items-center justify-center",
-            "aspect-48/48 size-6 sm:size-8 md:size-10 lg:size-12",
+            "text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl",
+            "font-bold text-[#1b2027] transition-colors duration-200",
+            "group-hover:text-[#a8c453] group-active:text-[#a8c453]",
           )}
         >
-          <Image
-            src={iconSrc}
-            alt={iconAlt}
-            width={48}
-            height={48}
-            className="object-cover w-full h-auto"
-          />
-        </figure>
+          {title}
+        </h4>
 
-        <article className="flex-1 text-left">
-          <h4
-            className={clsx(
-              "text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl",
-              "font-bold text-[#1b2027] transition-colors duration-200",
-              "group-hover:text-[#a8c453] group-active:text-[#a8c453]",
-            )}
-          >
-            {title}
-          </h4>
-
-          <p
-            className={clsx(
-              "mt-2 text-[#1b2027]/60",
-              "text-[10px] sm:text-xs md:text-sm lg:text-base xl:text-lg",
-            )}
-          >
-            {description}
-          </p>
-        </article>
-
-        <figure
+        <p
           className={clsx(
-            "flex items-center justify-center",
-            "aspect-56/56 size-8 sm:size-10 md:size-12 lg:size-14",
+            "mt-2 text-[#1b2027]/60",
+            "text-[10px] sm:text-xs md:text-sm lg:text-base xl:text-lg",
           )}
         >
-          <Image
-            src={iconSrc}
-            alt={iconAlt}
-            width={56}
-            height={56}
-            className="object-cover w-full h-auto opacity-10"
-          />
-        </figure>
+          {description}
+        </p>
       </div>
-    </button>
+
+      <figure
+        className={clsx(
+          "flex items-center justify-center",
+          "aspect-56/56 size-8 sm:size-10 md:size-12 lg:size-14",
+        )}
+      >
+        <Image
+          src={iconSrc}
+          alt={iconAlt}
+          width={56}
+          height={56}
+          className="object-cover w-full h-auto opacity-10"
+        />
+      </figure>
+    </article>
   );
 }

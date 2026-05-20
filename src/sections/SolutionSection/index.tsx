@@ -23,7 +23,7 @@ export default function SolutionSection() {
         "lg:px-20 lg:py-14",
       )}
     >
-      <div>
+      <article>
         <div
           className={clsx(
             "flex items-center gap-2",
@@ -61,7 +61,7 @@ export default function SolutionSection() {
             "text-sm sm:text-base md:text-lg lg:text-xl",
           )}
         />
-      </div>
+      </article>
 
       <SectionImages
         src="/images/cliente.png"

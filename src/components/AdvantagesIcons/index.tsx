@@ -64,7 +64,7 @@ export default function AdvantagesIcons() {
         const isEven = index % 2 === 0;
 
         return (
-          <div
+          <article
             key={iconSrc}
             className={clsx(
               "flex flex-col",
@@ -82,6 +82,7 @@ export default function AdvantagesIcons() {
                 "transition-colors duration-200",
                 "hover:bg-[#a8c453] active:bg-[#a8c453]",
                 "hover:border-[#a8c453] active:border-[#a8c453]",
+                "cursor-pointer",
               )}
             >
               <Image
@@ -101,7 +102,7 @@ export default function AdvantagesIcons() {
             >
               {description}
             </p>
-          </div>
+          </article>
         );
       })}
     </div>

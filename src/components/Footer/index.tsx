@@ -8,7 +8,7 @@ export default function Footer() {
         "flex flex-col md:flex-row",
         "justify-center items-center",
         "bg-[#3f4c2d] text-white",
-        "gap-8",
+        "gap-6",
         "px-8 py-4",
         "sm:px-12 sm:py-6",
         "md:px-16 md:py-8",
