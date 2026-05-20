@@ -68,7 +68,8 @@ export default function ProductCard({
 
         <span
           className={clsx(
-            "mt-auto pt-8 font-semibold text-[#1b2027]/70",
+            "mt-auto pt-8 w-fit",
+            "font-semibold text-[#1b2027]/70",
             "text-[10px] sm:text-xs md:text-sm lg:text-base xl:text-lg",
             "transition-opacity duration-200",
             "hover:text-[#1b2027]/50 active:text-[#1b2027]/50",
