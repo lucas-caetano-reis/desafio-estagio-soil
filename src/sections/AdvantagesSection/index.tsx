@@ -5,7 +5,7 @@ export default function AdvantagesSection() {
   return (
     <section
       className={clsx(
-        "mx-auto flex flex-col items-center",
+        "flex flex-col items-center",
         "bg-[#fffdf9] text-[#1b2027]",
         "px-8 py-8",
         "sm:px-12 sm:py-10",
@@ -17,13 +17,14 @@ export default function AdvantagesSection() {
         <h2
           className={clsx(
             "text-center",
-            "font-bold tracking-tight leading-tight",
+            "font-bold leading-tight tracking-tight",
             "text-2xl sm:text-3xl md:text-4xl xl:text-5xl",
           )}
         >
           Benefícios reais para o produtor
         </h2>
       </header>
+
       <AdvantagesIcons />
     </section>
   );

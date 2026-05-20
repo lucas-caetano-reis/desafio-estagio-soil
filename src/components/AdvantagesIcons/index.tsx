@@ -23,8 +23,7 @@ const advantages = [
   {
     description: (
       <>
-        Irrigacão rastreável
-        <br />e inteligente.
+        Irrigacão rastreável e inteligente.
       </>
     ),
     iconAlt: "Ícone de irrigação inteligente.",
@@ -33,9 +32,7 @@ const advantages = [
   {
     description: (
       <>
-        Mais produtividade,
-        <br />
-        menos desperdício.
+        Mais produtividade, menos desperdício.
       </>
     ),
     iconAlt: "Ícone de gráfico com crescimento de produtividade.",
@@ -44,9 +41,7 @@ const advantages = [
   {
     description: (
       <>
-        Cobertura em
-        <br />
-        qualquer local.
+        Cobertura em qualquer local.
       </>
     ),
     iconAlt: "Ícone de transmissão e cobertura de sinal.",
@@ -61,6 +56,7 @@ export default function AdvantagesIcons() {
         "mt-12 lg:mt-16",
         "grid grid-cols-2 lg:grid-cols-5",
         "gap-x-4 gap-y-8",
+        "md:gap-x-24",
         "lg:gap-x-8 lg:gap-y-0",
       )}
     >
@@ -68,7 +64,7 @@ export default function AdvantagesIcons() {
         const isEven = index % 2 === 0;
 
         return (
-          <article
+          <div
             key={iconSrc}
             className={clsx(
               "flex flex-col",
@@ -79,26 +75,33 @@ export default function AdvantagesIcons() {
           >
             <div
               className={clsx(
-                "flex",
-                "items-center justify-center",
-                "rounded-full border",
-                "size-28 shadow-lg",
-                isEven
-                  ? "border-[#31421f] bg-[#31421f]"
-                  : "border-[#a8c453] bg-[#a8c453]",
+                "bg-[#31421f] shadow-lg",
+                "flex items-center justify-center",
+                "rounded-full border border-[#31421f]",
+                "aspect-112/112 size-16 sm:size-20 md:size-24 lg:size-28",
+                "transition-colors duration-200",
+                "hover:bg-[#a8c453] active:bg-[#a8c453]",
+                "hover:border-[#a8c453] active:border-[#a8c453]",
               )}
             >
               <Image
                 src={iconSrc}
                 alt={iconAlt}
-                width={56}
-                height={56}
-                className="h-auto w-16 object-contain"
+                width={112}
+                height={112}
+                className="w-1/2 h-auto object-contain"
               />
             </div>
 
-            <p className="mt-5 max-w-60 text-lg leading-tight">{description}</p>
-          </article>
+            <p
+              className={clsx(
+                "mt-5 leading-tight max-w-60",
+                "text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl",
+              )}
+            >
+              {description}
+            </p>
+          </div>
         );
       })}
     </div>
