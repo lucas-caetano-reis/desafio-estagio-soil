@@ -61,7 +61,7 @@ export default function ChallengeCard({
 
         <p
           className={clsx(
-            "mt-2 text-[#1b2027]/60",
+            "mt-2 text-[#1b2027]/80",
             "text-[10px] sm:text-xs md:text-sm lg:text-base xl:text-lg",
           )}
         >

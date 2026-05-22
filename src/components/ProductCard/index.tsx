@@ -49,7 +49,7 @@ export default function ProductCard({
       >
         <h3
           className={clsx(
-            "text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl",
+            "text-base md:text-lg lg:text-xl xl:text-2xl",
             "font-bold text-[#1b2027] transition-colors duration-200",
             "group-hover:text-[#a8c453] group-active:text-[#a8c453]",
           )}
@@ -60,7 +60,7 @@ export default function ProductCard({
         <p
           className={clsx(
             "mt-2 leading-tight text-[#1b2027]/80",
-            "text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl",
+            "text-sm md:text-base lg:text-lg xl:text-xl",
           )}
         >
           {description}
@@ -70,7 +70,7 @@ export default function ProductCard({
           className={clsx(
             "mt-auto pt-8 w-fit",
             "font-semibold text-[#1b2027]/70",
-            "text-[10px] sm:text-xs md:text-sm lg:text-base xl:text-lg",
+            "text-xs md:text-sm lg:text-base xl:text-lg",
             "transition-opacity duration-200",
             "hover:text-[#1b2027]/50 active:text-[#1b2027]/50",
             "cursor-pointer",
