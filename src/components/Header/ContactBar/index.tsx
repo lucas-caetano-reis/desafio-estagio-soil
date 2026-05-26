@@ -29,8 +29,8 @@ export default function ContactBar() {
     <div
       aria-label="Informações de contato"
       className={clsx(
-        "flex flex-wrap",
         "bg-[#a5bf55]",
+        "flex flex-wrap",
         "items-center justify-center lg:justify-end",
         "text-xs sm:text-sm md:text-base",
         "font-medium",

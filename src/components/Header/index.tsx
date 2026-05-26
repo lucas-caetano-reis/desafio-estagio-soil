@@ -9,8 +9,7 @@ export default function Header() {
     <header className={clsx("sticky top-0 z-50", "bg-[#2f3b1d] text-white")}>
       <div
         className={clsx(
-          "flex flex-col",
-          "lg:grid lg:grid-cols-[160px_minmax(0,1fr)]",
+          "grid grid-cols-1 lg:grid-cols-[160px_minmax(0,1fr)]",
         )}
       >
         <Logo />

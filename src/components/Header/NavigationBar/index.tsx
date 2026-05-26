@@ -18,11 +18,14 @@ export default function NavigationBar() {
     <div
       aria-label="Barra de navegação"
       className={clsx(
+        "bg-[#2f3b1d]",
         "flex flex-col lg:flex-row",
-        "text-xs sm:text-sm md:text-base",
-        "gap-4 px-4 py-4",
         "lg:items-center lg:justify-between",
-        "lg:px-8 xl:px-12",
+        "text-xs sm:text-sm md:text-base",
+        "gap-4 px-4 py-2",
+        "md:py-4",
+        "lg:px-8",
+        "xl:px-12",
       )}
     >
       <nav aria-label="Atalhos para outras páginas">
@@ -67,8 +70,10 @@ export default function NavigationBar() {
           title="Botão de login"
           href="https://pc.soiltech.com.br/"
           className={clsx(
-            "min-w-28",
-            "px-4 py-4",
+            "min-w-20 sm:min-w-25 md:min-w-27.5 lg:min-w-30",
+            "px-2 py-2",
+            "md:px-4",
+            "lg:py-4",
             "font-bold text-[#2f3b1d]",
             "bg-white",
             "transition-colors hover:bg-[#f3f3ed] active:bg-[#f3f3ed]",
