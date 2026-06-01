@@ -1,12 +1,12 @@
 import clsx from "clsx";
-import { SearchIcon } from "lucide-react";
+import { Menu } from "lucide-react";
 
-export default function SearchButton() {
+export default function MenuButton() {
   return (
     <button
       type="button"
-      title="Botão de pesquisa"
-      aria-label="Botão de pesquisa"
+      title="Abrir menu de navegação"
+      aria-label="Abrir menu de navegação"
       className={clsx(
         "inline-flex",
         "h-10 w-10",
@@ -15,7 +15,7 @@ export default function SearchButton() {
         "transition-colors hover:bg-white/10 active:bg-white/10",
       )}
     >
-      <SearchIcon
+      <Menu
         className={clsx("h-6 w-6", "md:h-8 md:w-8", "lg:h-4 lg:w-4")}
         strokeWidth={2.3}
       />

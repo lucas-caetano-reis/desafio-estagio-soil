@@ -1,6 +1,7 @@
 import Container from "@/components/Container";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import MobileHeader from "@/components/MobileHeader";
 
 import HeroSection from "@/sections/HeroSection";
 import ChallengesSection from "@/sections/ChallengesSection";
@@ -13,7 +14,12 @@ import MarketSection from "@/sections/MarketSection";
 export default function HomePage() {
   return (
     <Container>
-      <Header />
+      <div className="lg:hidden">
+        <MobileHeader />
+      </div>
+      <div className="hidden lg:block">
+        <Header />
+      </div>
       <main className="flex w-full flex-col">
         <HeroSection />
         <ChallengesSection />
