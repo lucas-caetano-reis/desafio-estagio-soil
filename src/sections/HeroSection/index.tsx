@@ -25,28 +25,32 @@ export default function HeroSection() {
 
       <div
         className={clsx(
-          "flex flex-col",
-          "justify-center items-center",
+          "flex w-full flex-col",
+          "justify-center items-center lg:items-start",
           "px-8 py-8",
           "sm:px-12 sm:py-12",
           "md:px-16 md:py-16",
           "lg:px-20 lg:py-20",
           "xl:px-24 xl:py-24",
           "lg:absolute lg:inset-0",
-          "max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl",
         )}
       >
-        <div>
+        <div
+          className={clsx(
+            "flex flex-col",
+            "max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl",
+          )}
+        >
           <h1
             className={clsx(
               "font-bold leading-tight",
               "text-2xl sm:text-3xl md:text-4xl xl:text-5xl",
             )}
           >
-            Irrigação inteligente em qualquer lugar.
+            Irrigação inteligente em qualquer lugar.{" "}
             <em className="font-semibold italic inline-flex">
               {" "}
-              Mesmo sem internet.
+              Mesmo sem internet.{" "}
             </em>
           </h1>
 
