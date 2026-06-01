@@ -4,6 +4,7 @@ import clsx from "clsx";
 export default function AdvantagesSection() {
   return (
     <section
+      id="beneficios"
       className={clsx(
         "flex flex-col items-center",
         "bg-[#fffdf9] text-[#1b2027]",

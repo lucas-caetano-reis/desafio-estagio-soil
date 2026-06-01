@@ -4,6 +4,7 @@ import DefaultButton from "@/components/DefaultButton";
 export default function Footer() {
   return (
     <footer
+      id="contato"
       className={clsx(
         "flex flex-col md:flex-row",
         "justify-center items-center",

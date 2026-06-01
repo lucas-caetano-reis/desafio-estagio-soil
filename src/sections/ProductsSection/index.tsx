@@ -25,6 +25,7 @@ const products = [
 export default function ProductsSection() {
   return (
     <section
+      id="produtos"
       className={clsx(
         "flex flex-col items-center",
         "bg-[#fffdf9] text-[#1b2027]",

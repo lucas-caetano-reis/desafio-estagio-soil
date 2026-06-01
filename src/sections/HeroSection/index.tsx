@@ -5,7 +5,7 @@ import DefaultButton from "@/components/DefaultButton";
 
 export default function HeroSection() {
   return (
-    <section className="relative bg-[#aac55d] text-white">
+    <section id="inicio" className="relative bg-[#aac55d] text-white">
       <div
         className={clsx(
           "relative overflow-hidden",
@@ -44,7 +44,10 @@ export default function HeroSection() {
             )}
           >
             Irrigação inteligente em qualquer lugar.
-            <em className="font-semibold italic inline-flex"> Mesmo sem internet.</em>
+            <em className="font-semibold italic inline-flex">
+              {" "}
+              Mesmo sem internet.
+            </em>
           </h1>
 
           <p

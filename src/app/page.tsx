@@ -14,12 +14,8 @@ import MarketSection from "@/sections/MarketSection";
 export default function HomePage() {
   return (
     <Container>
-      <div className="lg:hidden">
-        <MobileHeader />
-      </div>
-      <div className="hidden lg:block">
-        <Header />
-      </div>
+      <MobileHeader />
+      <Header />
       <main className="flex w-full flex-col">
         <HeroSection />
         <ChallengesSection />

@@ -2,4 +2,5 @@
 
 html {
   scroll-padding-top: 8rem;
+  scroll-behavior: smooth;
 }

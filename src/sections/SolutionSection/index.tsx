@@ -12,6 +12,7 @@ const solutions = [
 export default function SolutionSection() {
   return (
     <section
+      id="solucao"
       className={clsx(
         "flex flex-col lg:flex-row",
         "items-center justify-center",

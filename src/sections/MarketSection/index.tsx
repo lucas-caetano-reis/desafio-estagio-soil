@@ -11,6 +11,7 @@ const marketHighlights = [
 export default function MarketSection() {
   return (
     <section
+      id="mercado"
       className={clsx(
         "flex flex-col lg:flex-row",
         "items-center justify-center",

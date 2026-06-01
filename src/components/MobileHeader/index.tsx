@@ -6,7 +6,12 @@ import MenuButton from "../MenuButton";
 
 export default function MobileHeader() {
   return (
-    <header className={clsx("sticky top-0 z-50", "bg-[#2f3b1d] text-white")}>
+    <header
+      className={clsx(
+        "flex lg:hidden sticky top-0 z-50",
+        "bg-[#2f3b1d] text-white",
+      )}
+    >
       <div className={clsx("flex w-full flex-row items-center")}>
         <Logo />
 

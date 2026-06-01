@@ -4,7 +4,7 @@ import SearchButton from "@/components/SearchButton";
 import DefaultButton from "@/components/DefaultButton";
 
 const navigationItems = [
-  { label: "Home +", href: "/" },
+  { label: "Home +", href: "#inicio" },
   { label: "Desafio", href: "#desafio" },
   { label: "Solução", href: "#solucao" },
   { label: "Produtos", href: "#produtos" },

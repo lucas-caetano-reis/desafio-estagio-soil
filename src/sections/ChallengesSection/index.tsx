@@ -37,6 +37,7 @@ const challenges = [
 export default function ChallengesSection() {
   return (
     <section
+      id="desafio"
       className={clsx(
         "flex flex-col items-center",
         "bg-[#fffdf9]",
