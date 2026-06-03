@@ -1,15 +1,15 @@
-import ContactSection from "@/components/MobileHeader/NavigationDrawer/ContactSection";
-import MenuSection from "@/components/MobileHeader/NavigationDrawer/MenuSection";
+import ContactSection from "@/components/SideBar/ContactSection";
+import MenuSection from "@/components/SideBar/MenuSection";
 
-type NavigationDrawerProps = {
+type SideBarProps = {
   isOpen: boolean;
   onClose: () => void;
 };
 
-export default function NavigationDrawer({
+export default function SideBar({
   isOpen,
   onClose,
-}: Readonly<NavigationDrawerProps>) {
+}: Readonly<SideBarProps>) {
   return (
     <div
       className={`
@@ -25,7 +25,7 @@ export default function NavigationDrawer({
       <div className="absolute inset-0 bg-black/60" onClick={onClose} />
 
       <aside
-        id="navigation-drawer"
+        id="side-bar"
         className={`
           absolute right-0 top-0 h-full w-2/3 bg-[#2f3b1d] text-white shadow-2xl
           transition-transform duration-300 ease-in-out

@@ -17,7 +17,7 @@ export default function MenuButton({
       title="Abrir menu de navegação"
       aria-label="Abrir menu de navegação"
       aria-expanded={isOpen}
-      aria-controls="navigation-drawer"
+      aria-controls="side-bar"
       className={clsx(
         "inline-flex",
         "h-10 w-10",

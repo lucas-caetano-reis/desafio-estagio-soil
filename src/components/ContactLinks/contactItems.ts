@@ -1,7 +1,6 @@
-import clsx from "clsx";
 import { Mail, MapPin, PhoneOutgoing } from "lucide-react";
 
-const contactItems = [
+export const contactItems = [
   {
     key: "enderecoSoil",
     label: "Santa Rita do Sapucaí - MG",
@@ -31,35 +30,3 @@ const contactItems = [
     icon: Mail,
   },
 ];
-
-export default function ContactInformations() {
-  return (
-    <nav aria-label="Informações de contato">
-      <ul className={clsx("flex flex-wrap", "gap-x-8 gap-y-2", "xl:gap-x-12")}>
-        {contactItems.map(({ key, label, info, href, icon: Icon }) => (
-          <li key={key}>
-            <a
-              aria-label={info}
-              title={info}
-              href={href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={clsx(
-                "inline-flex",
-                "items-center",
-                "gap-1.5 leading-tight",
-                "transition-opacity hover:opacity-85 active:opacity-85",
-              )}
-            >
-              <Icon
-                className={clsx("h-3.5 w-3.5", "xl:h-4 xl:w-4", "shrink-0")}
-                strokeWidth={2}
-              />
-              <span>{label}</span>
-            </a>
-          </li>
-        ))}
-      </ul>
-    </nav>
-  );
-}

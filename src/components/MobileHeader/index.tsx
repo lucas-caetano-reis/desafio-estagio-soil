@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 import Logo from "@/components/Logo";
 import SearchButton from "@/components/SearchButton";
 import MenuButton from "@/components/MobileHeader/MenuButton";
-import NavigationDrawer from "@/components/MobileHeader/NavigationDrawer";
+import SideBar from "@/components/SideBar";
 
 export default function MobileHeader() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -54,7 +54,7 @@ export default function MobileHeader() {
         </div>
       </header>
 
-      <NavigationDrawer isOpen={isDrawerOpen} onClose={closeDrawer} />
+      <SideBar isOpen={isDrawerOpen} onClose={closeDrawer} />
     </>
   );
 }
