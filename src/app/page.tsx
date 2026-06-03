@@ -1,7 +1,7 @@
 import Container from "@/components/Container";
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
+
 import MobileHeader from "@/components/MobileHeader";
+import Header from "@/components/Header";
 
 import HeroSection from "@/sections/HeroSection";
 import ChallengesSection from "@/sections/ChallengesSection";
@@ -11,11 +11,14 @@ import AdvantagesSection from "@/sections/AdvantagesSection";
 import WhySection from "@/sections/WhySection";
 import MarketSection from "@/sections/MarketSection";
 
+import Footer from "@/components/Footer";
+
 export default function HomePage() {
   return (
     <Container>
       <MobileHeader />
       <Header />
+
       <main className="flex w-full flex-col">
         <HeroSection />
         <ChallengesSection />
@@ -25,6 +28,7 @@ export default function HomePage() {
         <WhySection />
         <MarketSection />
       </main>
+
       <Footer />
     </Container>
   );

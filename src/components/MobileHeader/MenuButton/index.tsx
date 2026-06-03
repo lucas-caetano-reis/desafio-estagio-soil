@@ -1,12 +1,23 @@
 import clsx from "clsx";
 import { Menu } from "lucide-react";
 
-export default function MenuButton() {
+type MenuButtonProps = {
+  isOpen: boolean;
+  onClick: () => void;
+};
+
+export default function MenuButton({
+  isOpen,
+  onClick,
+}: Readonly<MenuButtonProps>) {
   return (
     <button
       type="button"
+      onClick={onClick}
       title="Abrir menu de navegação"
       aria-label="Abrir menu de navegação"
+      aria-expanded={isOpen}
+      aria-controls="navigation-drawer"
       className={clsx(
         "inline-flex",
         "h-10 w-10",

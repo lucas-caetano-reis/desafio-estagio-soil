@@ -1,26 +1,60 @@
+"use client";
+
 import clsx from "clsx";
+import { useState, useEffect } from "react";
 
 import Logo from "@/components/Logo";
-import SearchButton from "../SearchButton";
-import MenuButton from "../MenuButton";
+import SearchButton from "@/components/SearchButton";
+import MenuButton from "@/components/MobileHeader/MenuButton";
+import NavigationDrawer from "@/components/MobileHeader/NavigationDrawer";
 
 export default function MobileHeader() {
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+
+  function openDrawer() {
+    setIsDrawerOpen(true);
+  }
+
+  function closeDrawer() {
+    setIsDrawerOpen(false);
+  }
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(min-width: 1024px)");
+
+    function handleResize(event: MediaQueryListEvent) {
+      if (event.matches) {
+        closeDrawer();
+      }
+    }
+
+    mediaQuery.addEventListener("change", handleResize);
+
+    return () => {
+      mediaQuery.removeEventListener("change", handleResize);
+    };
+  }, []);
+
   return (
-    <header
-      className={clsx(
-        "flex lg:hidden sticky top-0 z-50",
-        "bg-[#2f3b1d] text-white",
-      )}
-    >
-      <div className={clsx("flex w-full flex-row items-center")}>
-        <Logo />
+    <>
+      <header
+        className={clsx(
+          "flex lg:hidden sticky top-0 z-40",
+          "bg-[#2f3b1d] text-white",
+        )}
+      >
+        <div className={clsx("flex w-full flex-row items-center")}>
+          <Logo />
 
-        <div className="flex flex-1 items-center justify-between px-3">
-          <SearchButton />
+          <div className="flex flex-1 items-center justify-between px-3">
+            <SearchButton />
 
-          <MenuButton />
+            <MenuButton isOpen={isDrawerOpen} onClick={openDrawer} />
+          </div>
         </div>
-      </div>
-    </header>
+      </header>
+
+      <NavigationDrawer isOpen={isDrawerOpen} onClose={closeDrawer} />
+    </>
   );
 }
