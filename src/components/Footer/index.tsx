@@ -39,8 +39,8 @@ export default function Footer() {
 
       <DefaultButton
         label="Fale com nossos especialistas"
-        title="Entrar em contato com a Soil"
-        aria_label="Fale com nossos especialistas"
+        ariaLabel="Entrar em contato com especialistas da Soil"
+        title="Entrar em contato com especialistas da Soil"
         href="#contato"
         className={clsx(
           "md:min-w-60",

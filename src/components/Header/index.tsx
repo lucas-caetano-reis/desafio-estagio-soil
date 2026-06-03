@@ -51,9 +51,11 @@ export default function Header() {
 
               <DefaultButton
                 label="Login"
-                aria_label="Botão de login"
-                title="Botão de login"
+                ariaLabel="Ir para a página de login"
+                title="Ir para a página de login"
                 href="https://pc.soiltech.com.br/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className={clsx(
                   "min-w-30",
                   "px-4 py-4",

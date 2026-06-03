@@ -66,7 +66,7 @@ export default function HeroSection() {
 
           <DefaultButton
             label="Quero transformar minha irrigação"
-            aria_label="Quero transformar minha irrigação"
+            ariaLabel="Descubra os produtos que irão transformar sua irrigação"
             title="Descubra os produtos que irão transformar sua irrigação"
             href="#produtos"
             className={clsx(

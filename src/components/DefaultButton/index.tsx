@@ -2,26 +2,19 @@ import clsx from "clsx";
 
 type DefaultButtonProps = {
   label: string;
-  title: string;
-  aria_label: string;
-  href: string;
+  ariaLabel: string;
   className?: string;
-
-} & React.ComponentProps<"button">;
+} & React.ComponentProps<"a">;
 
 export default function DefaultButton({
   label,
-  title,
-  aria_label,
-  href,
+  ariaLabel,
   className,
   ...props
 }: Readonly<DefaultButtonProps>) {
   return (
-    <button
-      type="button"
-      title={title}
-      aria-label={aria_label}
+    <a
+      aria-label={ariaLabel}
       className={clsx(
         "inline-flex",
         "items-center justify-center",
@@ -31,7 +24,7 @@ export default function DefaultButton({
       )}
       {...props}
     >
-      <a href={href}> {label} </a>
-    </button>
+      {label}
+    </a>
   );
 }

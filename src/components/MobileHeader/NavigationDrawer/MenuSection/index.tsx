@@ -12,14 +12,55 @@ import {
 } from "lucide-react";
 
 const navigationItems = [
-  { label: "Home", href: "#inicio", icon: House },
-  { label: "Desafio", href: "#desafio", icon: BanknoteArrowDown },
-  { label: "Solução", href: "#solucao", icon: Toolbox },
-  { label: "Produtos", href: "#produtos", icon: ShoppingBasket },
-  { label: "Benefícios", href: "#beneficios", icon: BanknoteArrowUp },
-  { label: "Mercado", href: "#mercado", icon: Store },
-  { label: "Contato", href: "#contato", icon: Contact },
-  { label: "Login", href: "https://pc.soiltech.com.br/", icon: LogIn },
+  {
+    key: "home",
+    label: "Home +",
+    arialabel: "Voltar para o início da página",
+    href: "#inicio",
+    icon: House,
+  },
+  {
+    key: "desafio",
+    label: "Desafio",
+    arialabel: "Conhecer os desafios no campo",
+    href: "#desafio",
+    icon: BanknoteArrowDown,
+  },
+  {
+    key: "solucao",
+    label: "Solução",
+    arialabel: "Conhecer as soluções que a Soil oferece",
+    href: "#solucao",
+    icon: Toolbox,
+  },
+  {
+    key: "produtos",
+    label: "Produtos",
+    arialabel: "Ver o catálogo de produtos",
+    href: "#produtos",
+    icon: ShoppingBasket,
+  },
+  {
+    key: "beneficios",
+    label: "Benefícios",
+    arialabel: "Descobrir os benefícios dos produtos",
+    href: "#beneficios",
+    icon: BanknoteArrowUp,
+  },
+  {
+    key: "mercado",
+    label: "Mercado",
+    arialabel: "Estatísticas de mercado",
+    href: "#mercado",
+    icon: Store,
+  },
+  {
+    key: "contato",
+    label: "Contato",
+    arialabel: "Ir para o rodapé da página",
+    href: "#contato",
+    icon: Contact,
+  },
 ];
 
 type MenuSectionProps = {
@@ -45,34 +86,64 @@ export default function MenuSection({ onClose }: Readonly<MenuSectionProps>) {
             "text-sm sm:text-base md:text-lg font-medium",
           )}
         >
-          {navigationItems.map(({ label, href, icon: Icon }, index) => (
-            <li key={label}>
-              <a
-                aria-label={label}
-                title={label}
-                href={href}
-                className={clsx(
-                  "inline-flex",
-                  "items-center",
-                  "gap-1.5 leading-tight",
-                  "transition-opacity hover:opacity-85 active:opacity-85",
-                  index === 0 ? "font-bold" : "font-medium",
-                )}
-                onClick={onClose}
-              >
-                <Icon
+          {navigationItems.map(
+            ({ key, label, arialabel, href, icon: Icon }, index) => (
+              <li key={key}>
+                <a
+                  aria-label={arialabel}
+                  title={arialabel}
+                  href={href}
                   className={clsx(
-                    "h-3.5 w-3.5",
-                    "sm:h-4 sm:w-4",
-                    "md:h-4.5 md:w-4.5",
-                    "shrink-0",
+                    "inline-flex",
+                    "items-center",
+                    "gap-1.5 leading-tight",
+                    "transition-opacity hover:opacity-85 active:opacity-85",
+                    index === 0 ? "font-bold" : "font-medium",
                   )}
-                  strokeWidth={2}
-                />
-                <span>{label}</span>
-              </a>
-            </li>
-          ))}
+                  onClick={onClose}
+                >
+                  <Icon
+                    className={clsx(
+                      "h-3.5 w-3.5",
+                      "sm:h-4 sm:w-4",
+                      "md:h-4.5 md:w-4.5",
+                      "shrink-0",
+                    )}
+                    strokeWidth={2}
+                  />
+                  <span>{label}</span>
+                </a>
+              </li>
+            ),
+          )}
+
+          <li key="login">
+            <a
+              aria-label="Ir para a página de login"
+              title="Ir para a página de login"
+              href="https://pc.soiltech.com.br/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={clsx(
+                "inline-flex",
+                "items-center",
+                "gap-1.5 leading-tight",
+                "transition-opacity hover:opacity-85 active:opacity-85",
+              )}
+              onClick={onClose}
+            >
+              <LogIn
+                className={clsx(
+                  "h-3.5 w-3.5",
+                  "sm:h-4 sm:w-4",
+                  "md:h-4.5 md:w-4.5",
+                  "shrink-0",
+                )}
+                strokeWidth={2}
+              />
+              <span>Login</span>
+            </a>
+          </li>
         </ul>
       </nav>
     </section>
