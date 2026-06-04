@@ -8,7 +8,7 @@ export default function Header() {
   return (
     <header
       className={clsx(
-        "hidden lg:block sticky top-0 z-50",
+        "hidden lg:block sticky top-0 z-40",
         "bg-[#2f3b1d] text-white",
       )}
     >
