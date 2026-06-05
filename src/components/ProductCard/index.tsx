@@ -34,6 +34,7 @@ export default function ProductCard({
       <article
         className={clsx(
           "group",
+          "snap-center shrink-0",
           "flex flex-col",
           "w-full max-w-3xs sm:max-w-2xs md:max-w-xs lg:max-w-sm",
           "overflow-hidden text-left",
@@ -41,7 +42,7 @@ export default function ProductCard({
           "bg-white",
           "transition-all duration-200",
           "border-transparent hover:border-[#a8c453] active:border-[#a8c453]",
-          "shadow-xl hover:shadow-2xl active:shadow-2xl",
+          "shadow-sm hover:shadow-lg active:shadow-lg",
           "hover:-translate-y-1 active:-translate-y-1",
           "hover:scale-101 active:scale-101",
         )}
