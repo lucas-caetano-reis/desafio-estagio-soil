@@ -4,12 +4,3 @@ html {
   scroll-padding-top: 8rem;
   scroll-behavior: smooth;
 }
-
-.no-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-
-.no-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}

@@ -1,16 +1,12 @@
-"use client";
-
 import clsx from "clsx";
 import Image from "next/image";
-import { useState } from "react";
-
-import ProductModal from "@/components/ProductModal";
 
 type ProductCardProps = {
   title: string;
   description: string;
   imageAlt: string;
   imageSrc: string;
+  openModal: () => void;
 };
 
 export default function ProductCard({
@@ -18,25 +14,14 @@ export default function ProductCard({
   description,
   imageAlt,
   imageSrc,
+  openModal,
 }: Readonly<ProductCardProps>) {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  function openModal() {
-    setIsModalOpen(true);
-  }
-
-  function closeModal() {
-    setIsModalOpen(false);
-  }
-
   return (
     <>
       <article
         className={clsx(
           "group",
-          "snap-center shrink-0",
-          "flex flex-col",
-          "w-full max-w-3xs sm:max-w-2xs md:max-w-xs lg:max-w-sm",
+          "flex w-full h-full flex-col",
           "overflow-hidden text-left",
           "rounded-2xl border-b-4",
           "bg-white",
@@ -87,7 +72,7 @@ export default function ProductCard({
             type="button"
             title="Abrir modal"
             aria-label="Abrir modal"
-            onClick={() => openModal()}
+            onClick={openModal}
             className={clsx(
               "mt-auto pt-8 w-fit",
               "font-semibold text-[#1b2027]/70",
@@ -101,8 +86,6 @@ export default function ProductCard({
           </button>
         </div>
       </article>
-
-      <ProductModal isOpen={isModalOpen} onClose={closeModal} title={title} />
     </>
   );
 }

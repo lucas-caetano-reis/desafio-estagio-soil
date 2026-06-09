@@ -1,8 +1,26 @@
-import clsx from "clsx";
+"use client";
 
+import clsx from "clsx";
+import { useState } from "react";
+
+import { products, type Product } from "@/data/Products/products";
 import ProductsCarousel from "@/components/ProductsCarousel";
+import ProductModal from "@/components/ProductModal";
 
 export default function ProductsSection() {
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  function openModal(product: Product) {
+    setSelectedProduct(product);
+    setIsModalOpen(true);
+  }
+
+  function closeModal() {
+    setSelectedProduct(null);
+    setIsModalOpen(false);
+  }
+
   return (
     <section
       id="produtos"
@@ -27,7 +45,15 @@ export default function ProductsSection() {
         </h2>
       </header>
 
-      <ProductsCarousel />
+      <ProductsCarousel products={products} onOpenModal={openModal} />
+
+      {selectedProduct && (
+        <ProductModal
+          isOpen={isModalOpen}
+          product={selectedProduct}
+          onClose={closeModal}
+        />
+      )}
     </section>
   );
 }

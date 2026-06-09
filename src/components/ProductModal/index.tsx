@@ -1,18 +1,18 @@
-"use client";
-
 import clsx from "clsx";
 import { X } from "lucide-react";
+
+import type { Product } from "@/data/Products/products";
 
 type ProductModalProps = {
   isOpen: boolean;
   onClose: () => void;
-  title: string;
+  product: Product;
 };
 
 export default function ProductModal({
   isOpen,
   onClose,
-  title,
+  product,
 }: Readonly<ProductModalProps>) {
   if (isOpen) {
     return (
@@ -22,6 +22,8 @@ export default function ProductModal({
           "flex items-center justify-center",
           "bg-black/50 px-4",
         )}
+        role="dialog"
+        aria-modal="true"
         onClick={onClose}
       >
         <div
@@ -34,14 +36,14 @@ export default function ProductModal({
           onClick={(event) => event.stopPropagation()}
         >
           <div className="flex items-center justify-between">
-            <h2
+            <h3
               className={clsx(
                 "text-[#1b2027]",
                 "text-base md:text-lg lg:text-xl xl:text-2xl",
               )}
             >
-              {title}
-            </h2>
+              {product.title}
+            </h3>
 
             <button
               type="button"
@@ -54,10 +56,7 @@ export default function ProductModal({
                 "transition-colors hover:bg-gray-300 active:bg-gray-300",
               )}
             >
-              <X
-                className={clsx("h-6 w-6")}
-                strokeWidth={2.4}
-              />
+              <X className={clsx("h-6 w-6")} strokeWidth={2.4} />
             </button>
           </div>
 
