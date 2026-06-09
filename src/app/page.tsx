@@ -8,7 +8,7 @@ import ChallengesSection from "@/sections/ChallengesSection";
 import SolutionSection from "@/sections/SolutionSection";
 import ProductsSection from "@/sections/ProductsSection";
 import AdvantagesSection from "@/sections/AdvantagesSection";
-import WhySection from "@/sections/WhySection";
+import ReasonsSection from "@/sections/ReasonsSection";
 import MarketSection from "@/sections/MarketSection";
 
 import Footer from "@/components/Footer";
@@ -25,7 +25,7 @@ export default function HomePage() {
         <SolutionSection />
         <ProductsSection />
         <AdvantagesSection />
-        <WhySection />
+        <ReasonsSection />
         <MarketSection />
       </main>
 

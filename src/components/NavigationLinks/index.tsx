@@ -1,6 +1,6 @@
 import clsx from "clsx";
 
-import { navigationItems } from "@/components/NavigationLinks/navigationItems";
+import { navigationItems } from "@/data/NavigationItems/navigationItems";
 
 type NavigationLinksProps = {
   listClassName?: string;

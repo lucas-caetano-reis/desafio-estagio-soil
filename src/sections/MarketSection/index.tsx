@@ -1,12 +1,7 @@
 import clsx from "clsx";
 import SectionImages from "@/components/SectionImages";
 import UnorderedList from "@/components/UnorderedList";
-
-const marketHighlights = [
-  "34 mil pivôs no Brasil, crescendo 7% ao ano.",
-  "2,8 mil só no Oeste da Bahia, com crescimento de 40% em 2 anos.",
-  "Presente no Brasil, nos EUA e em expansão para a Europa.",
-];
+import { marketStatistics } from "@/data/MarketStatistics/marketStatistics";
 
 export default function MarketSection() {
   return (
@@ -44,7 +39,7 @@ export default function MarketSection() {
         </h2>
 
         <UnorderedList
-          items={marketHighlights}
+          items={marketStatistics}
           classname={clsx(
             "mt-8 space-y-6 pl-6",
             "list-disc text-[#1f252c]/60",

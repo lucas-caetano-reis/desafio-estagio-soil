@@ -1,53 +1,7 @@
 import clsx from "clsx";
 import Image from "next/image";
 
-const advantages = [
-  {
-    description: (
-      <>
-        Até <strong>80% menos deslocamentos.</strong>
-      </>
-    ),
-    iconAlt: "Ícone de deslocamento e localização.",
-    iconSrc: "/images/icone_caminho.png",
-  },
-  {
-    description: (
-      <>
-        Até <strong>40% de economia em energia elétrica.</strong>
-      </>
-    ),
-    iconAlt: "Ícone de conta de luz e economia de energia.",
-    iconSrc: "/images/icone_conta_de_luz.png",
-  },
-  {
-    description: (
-      <>
-        Irrigacão rastreável e inteligente.
-      </>
-    ),
-    iconAlt: "Ícone de irrigação inteligente.",
-    iconSrc: "/images/icone_irrigacao.png",
-  },
-  {
-    description: (
-      <>
-        Mais produtividade, menos desperdício.
-      </>
-    ),
-    iconAlt: "Ícone de gráfico com crescimento de produtividade.",
-    iconSrc: "/images/icone_grafico.png",
-  },
-  {
-    description: (
-      <>
-        Cobertura em qualquer local.
-      </>
-    ),
-    iconAlt: "Ícone de transmissão e cobertura de sinal.",
-    iconSrc: "/images/icone_transmissao.png",
-  },
-] as const;
+import { advantages } from "@/data/Advantages/advantages";
 
 export default function AdvantagesIcons() {
   return (

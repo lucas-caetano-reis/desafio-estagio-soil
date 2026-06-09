@@ -1,16 +1,9 @@
 import clsx from "clsx";
 import SectionImages from "@/components/SectionImages";
 import UnorderedList from "@/components/UnorderedList";
+import { reasons } from "@/data/Reasons/reasons";
 
-const whyHighlights = [
-  "Funciona mesmo sem internet.",
-  "Plataforma com inteligência artificial.",
-  "Manutenção simples e modular.",
-  "Novas soluções em desenvolvimento constante.",
-  "Pós-venda completo: suporte remoto, revendedores locais e técnicos Soil.",
-];
-
-export default function WhySection() {
+export default function ReasonsSection() {
   return (
     <section
       className={clsx(
@@ -49,7 +42,7 @@ export default function WhySection() {
         </h2>
 
         <UnorderedList
-          items={whyHighlights}
+          items={reasons}
           classname={clsx(
             "mt-8 space-y-6 pl-6",
             "list-disc",

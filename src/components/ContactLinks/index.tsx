@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { contactItems } from "@/components/ContactLinks/contactItems";
+import { contactItems } from "@/data/ContactItems/contactItems";
 
 type ContactLinksProps = {
   listClassName?: string;

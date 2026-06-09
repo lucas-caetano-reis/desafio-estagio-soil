@@ -1,13 +1,7 @@
 import clsx from "clsx";
 import OrderedList from "@/components/OrderedList";
+import { solutions } from "@/data/Solutions/solutions";
 import SectionImages from "@/components/SectionImages";
-
-const solutions = [
-  "Automação remota via aplicativo.",
-  "GPS e sensores embarcados.",
-  "Conectividade por Satélite, RádioLoRa, Wi-Fi ou redes móveis.",
-  "Plataforma intuitiva com suporte inteligente e proativo.",
-];
 
 export default function SolutionSection() {
   return (
