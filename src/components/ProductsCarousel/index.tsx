@@ -14,17 +14,17 @@ export default function ProductsCarousel({
   onOpenModal,
 }: Readonly<ProductsCarouselProps>) {
   const [emblaRef] = useEmblaCarousel({
-    align: "center",
+    align: "start",
     dragFree: false,
+    containScroll: "trimSnaps",
   });
 
   return (
     <div
       className={clsx(
         "CarouselContainer",
-        "mx-auto mt-12",
-        "w-full max-w-7xl",
-        "px-4",
+        "mx-auto mt-12 px-4",
+        "w-full max-w-105 md:max-w-215 lg:max-w-7xl",
       )}
     >
       <div
@@ -33,25 +33,20 @@ export default function ProductsCarousel({
           "CarouselViewport",
           "cursor-grab active:cursor-grabbing",
           "overflow-hidden",
-          "px-1 py-2",
+          "py-4",
         )}
       >
-        <div
-          className={clsx(
-            "CarouselTrack",
-            "flex flex-row flex-nowrap touch-pan-y",
-            "gap-6",
-          )}
-        >
+        <div className={clsx("CarouselTrack", "flex touch-pan-y")}>
           {products.map((product) => (
             <div
               key={product.id}
               className={clsx(
                 "select-none",
-                "shrink-0",
-                "flex-[0_0_80%]",
-                "sm:flex-[0_0_42.5%]",
-                "lg:flex-[0_0_29%]",
+                "min-w-0 shrink-0",
+                "flex-[0_0_100%]",
+                "md:flex-[0_0_50%]",
+                "lg:flex-[0_0_33.333%]",
+                "px-2",
               )}
             >
               <ProductCard
