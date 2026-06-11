@@ -8,8 +8,8 @@ import ProductsCarousel from "@/components/ProductsCarousel";
 import ProductModal from "@/components/ProductModal";
 
 export default function ProductsSection() {
-  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
 
   function openModal(product: Product) {
     setSelectedProduct(product);
@@ -17,8 +17,8 @@ export default function ProductsSection() {
   }
 
   function closeModal() {
-    setSelectedProduct(null);
     setIsModalOpen(false);
+    setSelectedProduct(null);
   }
 
   return (
@@ -45,14 +45,14 @@ export default function ProductsSection() {
         </h2>
       </header>
 
-      <ProductsCarousel products={products} onOpenModal={openModal} />
+      <ProductsCarousel
+        products={products}
+        onOpenModal={openModal}
+        isModalOpen={isModalOpen}
+      />
 
-      {selectedProduct && (
-        <ProductModal
-          isOpen={isModalOpen}
-          product={selectedProduct}
-          onClose={closeModal}
-        />
+      {isModalOpen && selectedProduct && (
+        <ProductModal product={selectedProduct} onClose={closeModal} />
       )}
     </section>
   );

@@ -3,9 +3,13 @@ import type { EmblaCarouselType } from "embla-carousel";
 
 type UseEmbraControlsProps = {
   emblaApi: EmblaCarouselType | undefined;
+  isModalOpen: boolean;
 };
 
-export function useEmblaControls({ emblaApi }: UseEmbraControlsProps) {
+export function useEmblaControls({
+  emblaApi,
+  isModalOpen,
+}: UseEmbraControlsProps) {
   const [prevButtonDisabled, setPrevButtonDisabled] = useState(true);
   const [nextButtonDisabled, setNextButtonDisabled] = useState(true);
   const [selectedSnap, setSelectedSnap] = useState(0);
@@ -30,19 +34,38 @@ export function useEmblaControls({ emblaApi }: UseEmbraControlsProps) {
     updateCarouselState();
   }, [updateScrollSnaps, updateCarouselState]);
 
+  const stopAutoplay = useCallback(() => {
+    emblaApi?.plugins().autoplay?.stop();
+  }, [emblaApi]);
+
+  const playAutoplay = useCallback(() => {
+    if (isModalOpen) return;
+
+    emblaApi?.plugins().autoplay?.play();
+  }, [emblaApi, isModalOpen]);
+
+  const resetAutoplay = useCallback(() => {
+    if (isModalOpen) return;
+
+    emblaApi?.plugins().autoplay?.reset();
+  }, [emblaApi, isModalOpen]);
+
   const scrollPrev = useCallback(() => {
     emblaApi?.scrollPrev();
-  }, [emblaApi]);
+    resetAutoplay();
+  }, [emblaApi, resetAutoplay]);
 
   const scrollNext = useCallback(() => {
     emblaApi?.scrollNext();
-  }, [emblaApi]);
+    resetAutoplay();
+  }, [emblaApi, resetAutoplay]);
 
   const scrollTo = useCallback(
     (index: number) => {
       emblaApi?.scrollTo(index);
+      resetAutoplay();
     },
-    [emblaApi],
+    [emblaApi, resetAutoplay],
   );
 
   useEffect(() => {
@@ -63,6 +86,17 @@ export function useEmblaControls({ emblaApi }: UseEmbraControlsProps) {
     };
   }, [emblaApi, updateCarouselState, updateScrollSnaps, onReInit]);
 
+  useEffect(() => {
+    if (!emblaApi) return;
+
+    if (isModalOpen) {
+      stopAutoplay();
+      return;
+    }
+
+    playAutoplay();
+  }, [emblaApi, isModalOpen, stopAutoplay, playAutoplay]);
+
   return {
     prevButtonDisabled,
     nextButtonDisabled,
@@ -71,5 +105,7 @@ export function useEmblaControls({ emblaApi }: UseEmbraControlsProps) {
     scrollPrev,
     scrollNext,
     scrollTo,
+    stopAutoplay,
+    playAutoplay,
   };
 }

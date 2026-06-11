@@ -1,5 +1,9 @@
+"use client";
+
+import { useRef } from "react";
 import clsx from "clsx";
 import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
 
 import ProductCard from "@/components/ProductCard";
 import CarouselButton from "@/components/CarouselButton";
@@ -11,21 +15,34 @@ import type { Product } from "@/data/Products/products";
 type ProductsCarouselProps = {
   products: Product[];
   onOpenModal: (product: Product) => void;
+  isModalOpen: boolean;
 };
 
 export default function ProductsCarousel({
   products,
   onOpenModal,
+  isModalOpen,
 }: Readonly<ProductsCarouselProps>) {
-  const [emblaRef, emblaApi] = useEmblaCarousel({
-    loop: true,
-    dragFree: false,
-    containScroll: false,
-    align: "start",
-    breakpoints: {
-      "(min-width: 1024px)": { align: "center" },
+  const autoplay = useRef(
+    Autoplay({
+      delay: 4000,
+      stopOnInteraction: false,
+      stopOnMouseEnter: false,
+    }),
+  );
+
+  const [emblaRef, emblaApi] = useEmblaCarousel(
+    {
+      loop: true,
+      dragFree: false,
+      containScroll: false,
+      align: "start",
+      breakpoints: {
+        "(min-width: 1024px)": { align: "center" },
+      },
     },
-  });
+    [autoplay.current],
+  );
 
   const {
     selectedSnap,
@@ -33,7 +50,9 @@ export default function ProductsCarousel({
     scrollPrev,
     scrollNext,
     scrollTo,
-  } = useEmblaControls({ emblaApi });
+    stopAutoplay,
+    playAutoplay,
+  } = useEmblaControls({ emblaApi, isModalOpen });
 
   return (
     <div
@@ -44,14 +63,12 @@ export default function ProductsCarousel({
         "w-full max-w-105 md:max-w-215 lg:max-w-7xl",
       )}
     >
-      <CarouselButton
-        direction="prev"
-        onClick={scrollPrev}
-        disabled={false}
-      />
+      <CarouselButton direction="prev" onClick={scrollPrev} disabled={false} />
 
       <div
         ref={emblaRef}
+        onMouseEnter={stopAutoplay}
+        onMouseLeave={playAutoplay}
         className={clsx(
           "CarouselViewport",
           "cursor-grab active:cursor-grabbing",
@@ -84,11 +101,7 @@ export default function ProductsCarousel({
         </div>
       </div>
 
-      <CarouselButton
-        direction="next"
-        onClick={scrollNext}
-        disabled={false}
-      />
+      <CarouselButton direction="next" onClick={scrollNext} disabled={false} />
 
       <CarouselDots
         scrollSnaps={scrollSnaps}
