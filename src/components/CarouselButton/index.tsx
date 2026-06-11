@@ -28,18 +28,15 @@ export default function CarouselButton({
         isPrev ? "left-0" : "right-0",
         "flex h-10 w-10 items-center justify-center rounded-full",
         "bg-white text-[#1b2027] shadow-md",
-        "transition-all duration-200",
+        "transition-all duration-300",
         "cursor-pointer",
         "hover:bg-[#a8c453] hover:text-white",
+        "active:bg-[#a8c453] active:text-white",
         "focus:outline-none focus:ring-2 focus:ring-[#a8c453] focus:ring-offset-2",
         "disabled:pointer-events-none disabled:opacity-50",
       )}
     >
-      <Icon
-        aria-hidden="true"
-        className="h-6 w-6"
-        strokeWidth={2}
-      />
+      <Icon aria-hidden="true" className="h-6 w-6" strokeWidth={2} />
     </button>
   );
 }

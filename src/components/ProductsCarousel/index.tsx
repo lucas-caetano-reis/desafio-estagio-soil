@@ -20,6 +20,7 @@ export default function ProductsCarousel({
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: true,
     dragFree: false,
+    containScroll: false,
     align: "start",
     breakpoints: {
       "(min-width: 1024px)": { align: "center" },
@@ -27,8 +28,6 @@ export default function ProductsCarousel({
   });
 
   const {
-    prevButtonDisabled,
-    nextButtonDisabled,
     selectedSnap,
     scrollSnaps,
     scrollPrev,
@@ -48,7 +47,7 @@ export default function ProductsCarousel({
       <CarouselButton
         direction="prev"
         onClick={scrollPrev}
-        disabled={prevButtonDisabled}
+        disabled={false}
       />
 
       <div
@@ -61,7 +60,7 @@ export default function ProductsCarousel({
         )}
       >
         <div className={clsx("CarouselTrack", "flex touch-pan-y")}>
-          {products.map((product) => (
+          {products.map((product, index) => (
             <div
               key={product.id}
               className={clsx(
@@ -76,6 +75,8 @@ export default function ProductsCarousel({
             >
               <ProductCard
                 {...product}
+                isActive={index === selectedSnap}
+                onActivate={() => scrollTo(index)}
                 openModal={() => onOpenModal(product)}
               />
             </div>
@@ -86,7 +87,7 @@ export default function ProductsCarousel({
       <CarouselButton
         direction="next"
         onClick={scrollNext}
-        disabled={nextButtonDisabled}
+        disabled={false}
       />
 
       <CarouselDots
