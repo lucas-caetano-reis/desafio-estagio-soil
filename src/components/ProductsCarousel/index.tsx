@@ -1,5 +1,3 @@
-"use client";
-
 import clsx from "clsx";
 import useEmblaCarousel from "embla-carousel-react";
 
@@ -20,10 +18,12 @@ export default function ProductsCarousel({
   onOpenModal,
 }: Readonly<ProductsCarouselProps>) {
   const [emblaRef, emblaApi] = useEmblaCarousel({
-    loop: false,
+    loop: true,
     dragFree: false,
-    containScroll: "trimSnaps",
     align: "start",
+    breakpoints: {
+      "(min-width: 1024px)": { align: "center" },
+    },
   });
 
   const {
