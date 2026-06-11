@@ -23,6 +23,7 @@ export default function CarouselButton({
       onClick={onClick}
       disabled={disabled}
       className={clsx(
+        isPrev ? "PrevButton" : "NextButton",
         "absolute top-1/2 z-10 -translate-y-1/2",
         isPrev ? "left-0" : "right-0",
         "flex h-10 w-10 items-center justify-center rounded-full",

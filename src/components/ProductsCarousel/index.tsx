@@ -2,12 +2,13 @@
 
 import clsx from "clsx";
 import useEmblaCarousel from "embla-carousel-react";
-import { useCallback, useEffect, useState } from "react";
+
+import ProductCard from "@/components/ProductCard";
+import CarouselButton from "@/components/CarouselButton";
+import CarouselDots from "@/components/CarouselDots";
+import { useEmblaControls } from "@/hooks/Carousel/useEmblaControls";
 
 import type { Product } from "@/data/Products/products";
-import ProductCard from "@/components/ProductCard";
-import CarouselButton from "../CarouselButton";
-import CarouselDots from "../CarouselDots";
 
 type ProductsCarouselProps = {
   products: Product[];
@@ -20,79 +21,20 @@ export default function ProductsCarousel({
 }: Readonly<ProductsCarouselProps>) {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: false,
-    align: "start",
     dragFree: false,
     containScroll: "trimSnaps",
+    align: "start",
   });
 
-  const [prevButtonDisabled, setPrevButtonDisabled] = useState(true);
-  const [nextButtonDisabled, setNextButtonDisabled] = useState(true);
-
-  // Guardam a posição atualmente ativa e uma de lista de posições possíveis
-  const [selectedIndex, setSelectedIndex] = useState(0);
-  const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
-
-  const updateCarouselState = useCallback(() => {
-    if (!emblaApi) return;
-
-    // Se o carrossel não puder mais avançar ou retroceder, desabilita os botões
-    setPrevButtonDisabled(!emblaApi.canScrollPrev());
-    setNextButtonDisabled(!emblaApi.canScrollNext());
-
-    // Atualiza a posição ativa
-    setSelectedIndex(emblaApi.selectedScrollSnap());
-  }, [emblaApi]);
-  //useCallback garante que a emblaApi seja recriada somente quando ela mudar
-
-  // Atualiza o número de posições possíveis
-  const updateScrollSnaps = useCallback(() => {
-    if (!emblaApi) return;
-
-    setScrollSnaps(emblaApi.scrollSnapList());
-  }, [emblaApi]);
-
-  const onReInit = useCallback(() => {
-    updateScrollSnaps();
-    updateCarouselState();
-  }, [updateScrollSnaps, updateCarouselState]);
-
-  const scrollPrev = useCallback(() => {
-    emblaApi?.scrollPrev();
-  }, [emblaApi]);
-
-  const scrollNext = useCallback(() => {
-    emblaApi?.scrollNext();
-  }, [emblaApi]);
-
-  // Manda o carrossel ir para um card específico se um dot for clicado
-  const scrollTo = useCallback(
-    (index: number) => {
-      emblaApi?.scrollTo(index);
-    },
-    [emblaApi],
-  );
-
-  useEffect(() => {
-    if (!emblaApi) return;
-
-    // Agenda as atualizações para o próximo frame do navegador
-    // Evita erros de renderização em cascata
-    const frameId = requestAnimationFrame(() => {
-      updateScrollSnaps();
-      updateCarouselState();
-    });
-
-    // Executa as funções quando esses eventos ocorrerem
-    emblaApi.on("select", updateCarouselState);
-    emblaApi.on("reInit", onReInit);
-
-    // Função de limpeza
-    return () => {
-      cancelAnimationFrame(frameId);
-      emblaApi.off("select", updateCarouselState);
-      emblaApi.off("reInit", onReInit);
-    };
-  }, [emblaApi, updateCarouselState, updateScrollSnaps, onReInit]);
+  const {
+    prevButtonDisabled,
+    nextButtonDisabled,
+    selectedSnap,
+    scrollSnaps,
+    scrollPrev,
+    scrollNext,
+    scrollTo,
+  } = useEmblaControls({ emblaApi });
 
   return (
     <div
@@ -123,6 +65,7 @@ export default function ProductsCarousel({
             <div
               key={product.id}
               className={clsx(
+                "CarouselSlide",
                 "select-none",
                 "min-w-0 shrink-0",
                 "flex-[0_0_100%]",
@@ -148,7 +91,7 @@ export default function ProductsCarousel({
 
       <CarouselDots
         scrollSnaps={scrollSnaps}
-        selectedIndex={selectedIndex}
+        selectedSnap={selectedSnap}
         onDotClick={scrollTo}
       />
     </div>
