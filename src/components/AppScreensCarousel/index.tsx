@@ -7,23 +7,13 @@ import clsx from "clsx";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 
-import ProductCard from "@/components/ProductCard";
+import AppScreenCard from "@/components/AppScreenCard";
 import CarouselButton from "@/components/CarouselButton";
 import CarouselDots from "@/components/CarouselDots";
 
-import type { Product } from "@/data/Products/products";
+import { appScreens } from "@/data/AppScreens/appScreens";
 
-type ProductsCarouselProps = {
-  products: Product[];
-  onOpenModal: (product: Product) => void;
-  isModalOpen: boolean;
-};
-
-export default function ProductsCarousel({
-  products,
-  onOpenModal,
-  isModalOpen,
-}: Readonly<ProductsCarouselProps>) {
+export default function AppScreensCarousel() {
   const autoplay = useRef(
     Autoplay({
       delay: 4000,
@@ -37,10 +27,7 @@ export default function ProductsCarousel({
       loop: true,
       dragFree: false,
       containScroll: false,
-      align: "start",
-      breakpoints: {
-        "(min-width: 1024px)": { align: "center" },
-      },
+      align: "center",
     },
     [autoplay.current],
   );
@@ -53,15 +40,20 @@ export default function ProductsCarousel({
     scrollTo,
     stopAutoplay,
     playAutoplay,
-  } = useEmblaControls({ emblaApi, isModalOpen });
+  } = useEmblaControls({ emblaApi });
 
   return (
     <div
       className={clsx(
         "CarouselContainer",
         "relative",
-        "mx-auto mt-12 px-12",
-        "w-full max-w-105 md:max-w-215 lg:max-w-7xl",
+        "mx-auto px-12",
+        "w-full",
+        "max-w-sm",
+        "sm:max-w-xl",
+        "md:max-w-3xl",
+        "lg:max-w-5xl",
+        "xl:max-w-7xl",
       )}
     >
       <CarouselButton direction="prev" onClick={scrollPrev} disabled={false} />
@@ -78,24 +70,23 @@ export default function ProductsCarousel({
         )}
       >
         <div className={clsx("CarouselTrack", "flex touch-pan-y")}>
-          {products.map((product, index) => (
+          {appScreens.map((screen, index) => (
             <div
-              key={product.id}
+              key={screen.id}
               className={clsx(
                 "CarouselSlide",
                 "select-none",
-                "min-w-0 shrink-0",
-                "flex-[0_0_100%]",
-                "md:flex-[0_0_50%]",
-                "lg:flex-[0_0_33.333%]",
-                "px-2",
+                "min-w-0 shrink-0 grow-0",
+                "basis-full",
+                "sm:basis-[33.333%]",
+                "lg:basis-[20%]",
               )}
             >
-              <ProductCard
-                {...product}
+              <AppScreenCard
+                imageSrc={screen.imageSrc}
+                imageAlt={screen.imageAlt}
                 isActive={index === selectedSnap}
                 onActivate={() => scrollTo(index)}
-                openModal={() => onOpenModal(product)}
               />
             </div>
           ))}

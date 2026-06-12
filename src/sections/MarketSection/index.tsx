@@ -1,6 +1,8 @@
 import clsx from "clsx";
-import SectionImages from "@/components/SectionImages";
+
 import UnorderedList from "@/components/UnorderedList";
+import AppScreensCarousel from "@/components/AppScreensCarousel";
+
 import { marketStatistics } from "@/data/MarketStatistics/marketStatistics";
 
 export default function MarketSection() {
@@ -8,7 +10,7 @@ export default function MarketSection() {
     <section
       id="mercado"
       className={clsx(
-        "flex flex-col lg:flex-row",
+        "flex flex-col",
         "items-center justify-center",
         "bg-[#fffdf9]",
         "gap-12 md:gap-16 xl:gap-20",
@@ -49,17 +51,7 @@ export default function MarketSection() {
         />
       </article>
 
-      <SectionImages
-        src="/images/telas_app.png"
-        alt="Telas do aplicativo Soil com mapas, históricos e indicadores de irrigação."
-        width={768}
-        height={384}
-        classname={clsx(
-          "max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl",
-          "aspect-768/384",
-        )}
-        imageClassname="object-contain"
-      />
+      <AppScreensCarousel />
     </section>
   );
 }

@@ -3,12 +3,12 @@ import type { EmblaCarouselType } from "embla-carousel";
 
 type UseEmbraControlsProps = {
   emblaApi: EmblaCarouselType | undefined;
-  isModalOpen: boolean;
+  isModalOpen?: boolean;
 };
 
 export function useEmblaControls({
   emblaApi,
-  isModalOpen,
+  isModalOpen = false,
 }: UseEmbraControlsProps) {
   const [prevButtonDisabled, setPrevButtonDisabled] = useState(true);
   const [nextButtonDisabled, setNextButtonDisabled] = useState(true);

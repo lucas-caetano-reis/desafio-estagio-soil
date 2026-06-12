@@ -17,9 +17,9 @@ export default function CarouselDots({
         <button
           key={index}
           type="button"
-          aria-label={`Ir para o grupo de produtos ${index + 1}`}
+          aria-label={`Ir para a posição ${index + 1}`}
           aria-current={index === selectedSnap ? "true" : undefined}
-          title={`Ir para o grupo de produtos ${index + 1}`}
+          title={`Ir para a posição ${index + 1}`}
           onClick={() => onDotClick(index)}
           className={clsx(
             "PositionDots",

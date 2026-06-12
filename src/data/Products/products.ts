@@ -30,9 +30,23 @@ export const products = [
   },
   {
     id: 4,
+    title: "Produto 4:",
+    description: "Descrição do produto 4.",
+    imageAlt: "Homem instalando um monitor em um equipamento agrícola",
+    imageSrc: "/images/hero_background.jpg",
+  },
+  {
+    id: 5,
+    title: "Produto 5:",
+    description: "Descrição do produto 5.",
+    imageAlt: "Monitor instalado em um pluviômetro agrícola",
+    imageSrc: "/images/monitor_2.jpg",
+  },
+  {
+    id: 6,
     title: "Soil Monitor:",
     description: "Monitoramento de pressão e localização do pivô.",
     imageAlt: "Monitor de pivô com a logo da Soil",
     imageSrc: "/images/monitor_1.jpg",
-  }
+  },
 ];

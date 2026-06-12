@@ -19,13 +19,14 @@ export default function CarouselButton({
   return (
     <button
       type="button"
-      aria-label={isPrev ? "Produto anterior" : "Próximo produto"}
+      aria-label={isPrev ? "Voltar" : "Avançar"}
+      title={isPrev ? "Voltar" : "Avançar"}
       onClick={onClick}
       disabled={disabled}
       className={clsx(
         isPrev ? "PrevButton" : "NextButton",
         "absolute top-1/2 z-10 -translate-y-1/2",
-        isPrev ? "left-0" : "right-0",
+        isPrev ? "-left-4" : "-right-4",
         "flex h-10 w-10 items-center justify-center rounded-full",
         "bg-white text-[#1b2027] shadow-md",
         "transition-all duration-300",
