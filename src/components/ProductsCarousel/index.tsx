@@ -61,7 +61,7 @@ export default function ProductsCarousel({
         "CarouselContainer",
         "relative",
         "mx-auto mt-12 px-12",
-        "w-full max-w-105 md:max-w-215 lg:max-w-7xl",
+        "w-full max-w-sm sm:max-w-md md:max-w-3xl lg:max-w-7xl",
       )}
     >
       <CarouselButton direction="prev" onClick={scrollPrev} disabled={false} />

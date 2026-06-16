@@ -49,10 +49,10 @@ export default function AppScreensCarousel() {
         "relative",
         "mx-auto mt-8 px-12",
         "w-full",
-        "max-w-sm",
-        "sm:max-w-xl",
+        "max-w-xs",
+        "sm:max-w-sm",
         "md:max-w-3xl",
-        "lg:max-w-5xl",
+        "lg:max-w-4xl",
         "xl:max-w-7xl",
       )}
     >
@@ -77,9 +77,10 @@ export default function AppScreensCarousel() {
                 "CarouselSlide",
                 "select-none",
                 "min-w-0 shrink-0 grow-0",
-                "basis-full",
-                "sm:basis-[33.333%]",
-                "lg:basis-[20%]",
+                "flex-[0_0_100%]",
+                "md:flex-[0_0_33.333%]",
+                "xl:flex-[0_0_20%]",
+                "px-2",
               )}
             >
               <AppScreenCard
