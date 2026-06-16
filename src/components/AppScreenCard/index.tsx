@@ -27,7 +27,7 @@ export default function AppScreenCard({
         "rounded-2xl bg-[#e8f0cd] shadow-lg",
 
         "transition-all duration-300 ease-out",
-        isActive ? "scale-100 opacity-100" : "scale-90 opacity-90",
+        isActive ? "scale-100 opacity-100" : "scale-95 opacity-90",
       )}
     >
       <Image
