@@ -47,7 +47,7 @@ export default function AppScreensCarousel() {
       className={clsx(
         "CarouselContainer",
         "relative",
-        "mx-auto px-12",
+        "mx-auto mt-8 px-12",
         "w-full",
         "max-w-sm",
         "sm:max-w-xl",
