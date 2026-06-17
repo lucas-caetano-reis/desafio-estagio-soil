@@ -7,23 +7,12 @@ import clsx from "clsx";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 
-import ProductCard from "@/components/ProductCard";
+import HeroBackground from "@/components/HeroBackground";
 import CarouselButton from "@/components/CarouselButton";
-import CarouselDots from "@/components/CarouselDots";
 
-import type { Product } from "@/data/Products/products";
+import { backgrounds } from "@/data/Backgrounds/backgrounds";
 
-type ProductsCarouselProps = {
-  products: Product[];
-  onOpenModal: (product: Product) => void;
-  isModalOpen: boolean;
-};
-
-export default function ProductsCarousel({
-  products,
-  onOpenModal,
-  isModalOpen,
-}: Readonly<ProductsCarouselProps>) {
+export default function HeroBackgroundCarousel() {
   const autoplay = useRef(
     Autoplay({
       delay: 4000,
@@ -37,37 +26,24 @@ export default function ProductsCarousel({
       loop: true,
       dragFree: false,
       containScroll: false,
-      align: "start",
-      breakpoints: {
-        "(min-width: 1024px)": { align: "center" },
-      },
+      align: "center",
     },
     [autoplay.current],
   );
 
   const {
-    selectedSnap,
-    scrollSnaps,
     scrollPrev,
     scrollNext,
-    scrollTo,
     stopAutoplay,
     playAutoplay,
-  } = useEmblaControls({ emblaApi, isModalOpen });
+  } = useEmblaControls({ emblaApi });
 
   return (
-    <div
-      className={clsx(
-        "CarouselContainer",
-        "relative",
-        "mx-auto mt-12 px-12",
-        "w-full max-w-sm sm:max-w-md md:max-w-3xl lg:max-w-7xl",
-      )}
-    >
+    <div className={clsx("CarouselContainer", "relative w-full")}>
       <CarouselButton
         direction="prev"
-        placementLeft="-left-4"
-        placementRight="-right-4"
+        placementLeft="left-5"
+        placementRight="right-5"
         onClick={scrollPrev}
         disabled={false}
       />
@@ -80,28 +56,22 @@ export default function ProductsCarousel({
           "CarouselViewport",
           "cursor-grab active:cursor-grabbing",
           "overflow-hidden",
-          "py-4",
         )}
       >
         <div className={clsx("CarouselTrack", "flex touch-pan-y")}>
-          {products.map((product, index) => (
+          {backgrounds.map((background) => (
             <div
-              key={product.id}
+              key={background.id}
               className={clsx(
                 "CarouselSlide",
                 "select-none",
-                "min-w-0 shrink-0",
+                "min-w-0 shrink-0 grow-0",
                 "flex-[0_0_100%]",
-                "md:flex-[0_0_50%]",
-                "lg:flex-[0_0_33.333%]",
-                "px-2",
               )}
             >
-              <ProductCard
-                {...product}
-                isActive={index === selectedSnap}
-                onActivate={() => scrollTo(index)}
-                openModal={() => onOpenModal(product)}
+              <HeroBackground
+                imageSrc={background.imageSrc}
+                imageAlt={background.imageAlt}
               />
             </div>
           ))}
@@ -110,16 +80,10 @@ export default function ProductsCarousel({
 
       <CarouselButton
         direction="next"
-        placementLeft="-left-4"
-        placementRight="-right-4"
+        placementLeft="left-5"
+        placementRight="right-5"
         onClick={scrollNext}
         disabled={false}
-      />
-
-      <CarouselDots
-        scrollSnaps={scrollSnaps}
-        selectedSnap={selectedSnap}
-        onDotClick={scrollTo}
       />
     </div>
   );

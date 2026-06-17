@@ -56,7 +56,13 @@ export default function AppScreensCarousel() {
         "xl:max-w-7xl",
       )}
     >
-      <CarouselButton direction="prev" onClick={scrollPrev} disabled={false} />
+      <CarouselButton
+        direction="prev"
+        placementLeft="-left-4"
+        placementRight="-right-4"
+        onClick={scrollPrev}
+        disabled={false}
+      />
 
       <div
         ref={emblaRef}
@@ -94,7 +100,13 @@ export default function AppScreensCarousel() {
         </div>
       </div>
 
-      <CarouselButton direction="next" onClick={scrollNext} disabled={false} />
+      <CarouselButton
+        direction="next"
+        placementLeft="-left-4"
+        placementRight="-right-4"
+        onClick={scrollNext}
+        disabled={false}
+      />
 
       <CarouselDots
         scrollSnaps={scrollSnaps}

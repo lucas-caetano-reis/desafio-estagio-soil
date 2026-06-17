@@ -3,12 +3,16 @@ import { ArrowBigLeft, ArrowBigRight } from "lucide-react";
 
 type CarouselButtonProps = {
   direction: "prev" | "next";
+  placementLeft: string;
+  placementRight: string;
   onClick: () => void;
   disabled: boolean;
 };
 
 export default function CarouselButton({
   direction,
+  placementLeft,
+  placementRight,
   onClick,
   disabled,
 }: Readonly<CarouselButtonProps>) {
@@ -26,7 +30,7 @@ export default function CarouselButton({
       className={clsx(
         isPrev ? "PrevButton" : "NextButton",
         "absolute top-1/2 z-10 -translate-y-1/2",
-        isPrev ? "-left-4" : "-right-4",
+        isPrev ? placementLeft : placementRight,
         "flex h-10 w-10 items-center justify-center rounded-full",
         "bg-white text-[#1b2027] shadow-md",
         "transition-all duration-300",

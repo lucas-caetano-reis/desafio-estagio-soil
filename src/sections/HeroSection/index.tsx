@@ -1,27 +1,12 @@
-import Image from "next/image";
 import clsx from "clsx";
 
+import HeroBackgroundCarousel from "@/components/HeroBackgroundCarousel";
 import DefaultButton from "@/components/DefaultButton";
 
 export default function HeroSection() {
   return (
     <section id="inicio" className="relative bg-[#aac55d] text-white">
-      <div
-        className={clsx(
-          "relative overflow-hidden",
-          "w-full h-80 sm:h-120 lg:h-160",
-        )}
-      >
-        <Image
-          src="/images/hero_background.jpg"
-          alt="Funcionários da Soil instalando um monitor em um pivô agrícola."
-          fill
-          priority
-          className="object-cover object-[50%_25%]"
-        />
-
-        <div className="hidden lg:block absolute inset-0 bg-black/20" />
-      </div>
+      <HeroBackgroundCarousel />
 
       <div
         className={clsx(
