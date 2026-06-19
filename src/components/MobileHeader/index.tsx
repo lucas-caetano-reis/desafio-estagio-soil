@@ -4,7 +4,6 @@ import clsx from "clsx";
 import { useState, useEffect } from "react";
 
 import Logo from "@/components/Logo";
-import SearchButton from "@/components/SearchButton";
 import MenuButton from "@/components/MobileHeader/MenuButton";
 import SideBar from "@/components/SideBar";
 
@@ -46,9 +45,7 @@ export default function MobileHeader() {
         <div className={clsx("flex w-full flex-row items-center")}>
           <Logo />
 
-          <div className="flex flex-1 items-center justify-between px-3">
-            <SearchButton />
-
+          <div className="flex flex-1 items-center justify-end px-3">
             <MenuButton isOpen={isDrawerOpen} onClick={openDrawer} />
           </div>
         </div>

@@ -1,13 +1,12 @@
 import clsx from "clsx";
-import Link from "next/link";
 import Image from "next/image";
 
 export default function Logo() {
   return (
-    <Link
-      href="/"
+    <a
       aria-label="Logomarca da Soil"
       title="Logomarca da Soil"
+      href="#inicio"
       className={clsx(
         "w-20 sm:w-25 md:w-30 lg:w-40",
         "rounded-br-xl sm:rounded-br-2xl md:rounded-br-3xl lg:rounded-br-4xl",
@@ -26,6 +25,6 @@ export default function Logo() {
         height={74}
         className="w-full h-auto object-cover"
       />
-    </Link>
+    </a>
   );
 }

@@ -20,7 +20,7 @@ export const advantages = [
     iconSrc: "/images/icone_grafico.png",
   },
   {
-    description: "Cobertura em qualquer local.",
+    description: "Conectividade em qualquer local.",
     iconAlt: "Ícone de transmissão e cobertura de sinal.",
     iconSrc: "/images/icone_transmissao.png",
   },

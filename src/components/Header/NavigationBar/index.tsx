@@ -1,7 +1,6 @@
 import clsx from "clsx";
 
 import NavigationLinks from "@/components/NavigationLinks";
-import SearchButton from "@/components/SearchButton";
 import DefaultButton from "@/components/DefaultButton";
 
 export default function NavigationBar() {
@@ -24,9 +23,7 @@ export default function NavigationBar() {
         )}
       />
 
-      <div className={clsx("flex", "items-center justify-end", "gap-x-4")}>
-        <SearchButton />
-
+      <div className={clsx("flex items-center justify-end",)}>
         <DefaultButton
           label="Login"
           ariaLabel="Ir para a página de login"
