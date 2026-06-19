@@ -34,7 +34,7 @@ export default function NavigationLinks({
               onClick={onItemClick}
             >
               {showIcons ? (
-                <Icon className={clsx("shrink-0", iconClassName)} strokeWidth={2} />
+                <Icon aria-hidden="true" className={clsx("shrink-0", iconClassName)} strokeWidth={2} />
               ) : null}
               <span>{label}</span>
             </a>

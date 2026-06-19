@@ -60,7 +60,7 @@ export default function SolutionSection() {
 
       <SectionImages
         src="/images/cliente.png"
-        alt="Cliente usando o aplicativo da Soil no campo"
+        alt="Cliente utilizando o aplicativo da Soil para monitorar e controlar a irrigação de seu campo."
         width={512}
         height={512}
         classname={clsx(

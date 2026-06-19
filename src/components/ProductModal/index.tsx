@@ -44,6 +44,8 @@ export default function ProductModal({
 
           <button
             type="button"
+            aria-label="Fechar o modal."
+            title="Fechar o modal."
             onClick={onClose}
             className={clsx(
               "inline-flex",
@@ -53,7 +55,11 @@ export default function ProductModal({
               "transition-colors hover:bg-gray-300 active:bg-gray-300",
             )}
           >
-            <X className={clsx("h-6 w-6")} strokeWidth={2.4} />
+            <X
+              aria-hidden="true"
+              className={clsx("h-6 w-6")}
+              strokeWidth={2.4}
+            />
           </button>
         </div>
 

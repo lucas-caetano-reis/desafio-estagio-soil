@@ -42,6 +42,7 @@ export default function AdvantagesIcons() {
               <Image
                 src={iconSrc}
                 alt={iconAlt}
+                aria-hidden="true"
                 width={112}
                 height={112}
                 className="w-1/2 h-auto object-contain"

@@ -33,7 +33,7 @@ export default function ContactLinks({
               )}
               onClick={onItemClick}
             >
-              <Icon className={clsx("shrink-0", iconClassName)} strokeWidth={2} />
+              <Icon aria-hidden="true" className={clsx("shrink-0", iconClassName)} strokeWidth={2} />
               <span>{label}</span>
             </a>
           </li>

@@ -46,6 +46,7 @@ export default function MenuSection({ onClose }: Readonly<MenuSectionProps>) {
         onClick={onClose}
       >
         <LogIn
+          aria-hidden="true"
           className={clsx(
             "h-3.5 w-3.5",
             "sm:h-4 sm:w-4",

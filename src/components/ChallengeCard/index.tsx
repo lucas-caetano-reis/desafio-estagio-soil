@@ -42,6 +42,7 @@ export default function ChallengeCard({
         <Image
           src={iconSrc}
           alt={iconAlt}
+          aria-hidden="true"
           width={48}
           height={48}
           className="w-full h-auto object-cover"
@@ -78,6 +79,7 @@ export default function ChallengeCard({
         <Image
           src={iconSrc}
           alt={iconAlt}
+          aria-hidden="true"
           width={56}
           height={56}
           className="object-cover w-full h-auto opacity-10"

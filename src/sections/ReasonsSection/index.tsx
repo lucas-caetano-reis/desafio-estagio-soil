@@ -19,7 +19,7 @@ export default function ReasonsSection() {
     >
       <SectionImages
         src="/images/fazenda_conectada.png"
-        alt="Ilustração de uma fazenda conectada com sensores, nuvem e monitoramento remoto."
+        alt="Fazenda conectada ao aplicativo da Soil por meio de WiFi 2.4GHz, Rede GPRS e Rede Lora 900MHz."
         width={512}
         height={394}
         classname={clsx(

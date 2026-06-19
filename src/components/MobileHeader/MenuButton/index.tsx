@@ -27,6 +27,7 @@ export default function MenuButton({
       )}
     >
       <Menu
+        aria-hidden="true"
         className={clsx("h-6 w-6", "md:h-8 md:w-8", "lg:h-4 lg:w-4")}
         strokeWidth={2.3}
       />
