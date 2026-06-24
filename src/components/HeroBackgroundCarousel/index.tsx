@@ -31,15 +31,13 @@ export default function HeroBackgroundCarousel() {
     [autoplay.current],
   );
 
-  const {
-    scrollPrev,
-    scrollNext,
-    stopAutoplay,
-    playAutoplay,
-  } = useEmblaControls({ emblaApi });
+  const { scrollPrev, scrollNext, stopAutoplay, playAutoplay } =
+    useEmblaControls({ emblaApi });
 
   return (
-    <div className={clsx("CarouselContainer", "relative w-full")}>
+    <div
+      className={clsx("CarouselContainer", "relative h-1/2 w-full lg:h-full")}
+    >
       <CarouselButton
         direction="prev"
         placementLeft="left-5"
@@ -55,16 +53,17 @@ export default function HeroBackgroundCarousel() {
         className={clsx(
           "CarouselViewport",
           "cursor-grab active:cursor-grabbing",
-          "overflow-hidden",
+          "h-full overflow-hidden",
         )}
       >
-        <div className={clsx("CarouselTrack", "flex touch-pan-y")}>
+        <div className={clsx("CarouselTrack", "flex h-full touch-pan-y")}>
           {backgrounds.map((background) => (
             <div
               key={background.id}
               className={clsx(
                 "CarouselSlide",
                 "select-none",
+                "h-full",
                 "min-w-0 shrink-0 grow-0",
                 "flex-[0_0_100%]",
               )}

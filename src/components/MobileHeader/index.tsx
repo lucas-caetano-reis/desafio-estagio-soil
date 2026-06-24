@@ -38,7 +38,7 @@ export default function MobileHeader() {
     <>
       <header
         className={clsx(
-          "flex lg:hidden sticky top-0 z-40",
+          "flex lg:hidden sticky top-0 z-40 h-(--header-height)",
           "bg-[#2f3b1d] text-white",
         )}
       >

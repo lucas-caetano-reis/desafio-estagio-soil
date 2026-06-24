@@ -5,19 +5,22 @@ import DefaultButton from "@/components/DefaultButton";
 
 export default function HeroSection() {
   return (
-    <section id="inicio" className="relative bg-[#aac55d] text-white">
+    <section
+      id="inicio"
+      className="relative flex h-[calc(100dvh-var(--header-height))] flex-col overflow-hidden bg-[#aac55d] text-white"
+    >
       <HeroBackgroundCarousel />
 
       <div
         className={clsx(
-          "flex w-full flex-col",
+          "flex w-full flex-1 flex-col",
           "justify-center items-center lg:items-start",
           "px-8 py-8",
           "sm:px-12 sm:py-12",
           "md:px-16 md:py-16",
-          "lg:px-20 lg:py-20",
-          "xl:px-24 xl:py-24",
-          "lg:absolute lg:inset-0",
+          "lg:px-28 lg:py-20",
+          "xl:py-24",
+          "lg:absolute lg:inset-0 lg:h-full",
         )}
       >
         <div

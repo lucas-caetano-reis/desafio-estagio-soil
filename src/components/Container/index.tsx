@@ -6,8 +6,18 @@ type ContainerProps = {
 
 export default function Container({ children }: Readonly<ContainerProps>) {
   return (
-    <div className={clsx("bg-[#fffdf9]", "min-h-screen")}>
-      <div className={clsx("max-w-screen")}>{children}</div>
+    <div className="bg-[#fffdf9] min-h-screen">
+      <div
+        className={clsx(
+          "max-w-screen",
+          "[--header-height:54px]",
+          "sm:[--header-height:64px]",
+          "md:[--header-height:80px]",
+          "lg:[--header-height:112px]",
+        )}
+      >
+        {children}
+      </div>
     </div>
   );
 }

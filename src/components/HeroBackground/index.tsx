@@ -11,12 +11,7 @@ export default function HeroBackground({
   imageAlt,
 }: Readonly<HeroBackgroundProps>) {
   return (
-    <div
-      className={clsx(
-        "relative overflow-hidden",
-        "w-full h-80 sm:h-120 lg:h-160",
-      )}
-    >
+    <div className={clsx("relative overflow-hidden", "h-full w-full")}>
       <Image
         src={imageSrc}
         alt={imageAlt}
