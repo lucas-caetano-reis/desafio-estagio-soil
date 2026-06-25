@@ -1,6 +1,28 @@
 @import "tailwindcss";
 
 html {
-  scroll-padding-top: 8rem;
   scroll-behavior: smooth;
+  scroll-padding-top: var(--scroll-padding-top);
+}
+
+:root {
+  --scroll-padding-top: 54px;
+}
+
+@media (min-width: 640px) {
+  :root {
+    --scroll-padding-top: 64px;
+  }
+}
+
+@media (min-width: 768px) {
+  :root {
+    --scroll-padding-top: 80px;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --scroll-padding-top: 112px;
+  }
 }

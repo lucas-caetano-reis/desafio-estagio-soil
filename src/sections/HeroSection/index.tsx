@@ -7,7 +7,10 @@ export default function HeroSection() {
   return (
     <section
       id="inicio"
-      className="relative flex h-[calc(100dvh-var(--header-height))] flex-col overflow-hidden bg-[#aac55d] text-white"
+      className={clsx(
+        "relative flex h-[calc(100dvh-var(--header-height))] flex-col overflow-hidden",
+        "bg-[#aac55d] text-white",
+      )}
     >
       <HeroBackgroundCarousel />
 

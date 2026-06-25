@@ -22,9 +22,10 @@ export default function ChallengeCard({
         "overflow-hidden",
         "rounded-xl border-b-4",
         "bg-white",
-        "gap-4",
+        "gap-4 sm:gap-6 xl:gap-8",
         "px-4 py-4",
-        "xl:px-6 xl:py-6",
+        "sm:px-6 sm:py-6",
+        "xl:px-8 xl:py-8",
         "transition-all duration-200",
         "border-transparent hover:border-[#a8c453] active:border-[#a8c453]",
         "shadow-xl hover:shadow-2xl active:shadow-2xl",
@@ -36,7 +37,7 @@ export default function ChallengeCard({
       <figure
         className={clsx(
           "flex items-center justify-center",
-          "aspect-48/48 size-6 sm:size-8 md:size-10 lg:size-12",
+          "aspect-48/48 size-8 sm:size-10 md:size-12 lg:size-14",
         )}
       >
         <Image
@@ -52,7 +53,7 @@ export default function ChallengeCard({
       <div className="flex flex-1 flex-col text-left">
         <h4
           className={clsx(
-            "text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl",
+            "text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl",
             "font-bold text-[#1b2027] transition-colors duration-200",
             "group-hover:text-[#a8c453] group-active:text-[#a8c453]",
           )}
@@ -63,7 +64,7 @@ export default function ChallengeCard({
         <p
           className={clsx(
             "mt-2 text-[#1b2027]/80",
-            "text-[10px] sm:text-xs md:text-sm lg:text-base xl:text-lg",
+            "text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl",
           )}
         >
           {description}
@@ -73,7 +74,7 @@ export default function ChallengeCard({
       <figure
         className={clsx(
           "flex items-center justify-center",
-          "aspect-56/56 size-8 sm:size-10 md:size-12 lg:size-14",
+          "aspect-56/56 size-10 sm:size-12 md:size-14 lg:size-16",
         )}
       >
         <Image

@@ -8,7 +8,7 @@ export default function ChallengesSection() {
     <section
       id="desafio"
       className={clsx(
-        "flex flex-col items-center",
+        "flex min-h-[calc(100dvh-var(--header-height))] flex-col items-center",
         "bg-[#fffdf9]",
         "px-8 py-8",
         "sm:px-12 sm:py-10",
@@ -41,7 +41,7 @@ export default function ChallengesSection() {
         className={clsx(
           "mt-12",
           "grid grid-cols-1 lg:grid-cols-2",
-          "gap-4 lg:gap-6",
+          "gap-6 lg:gap-8",
         )}
       >
         {challenges.map((challenge) => (
@@ -53,7 +53,8 @@ export default function ChallengesSection() {
             "flex items-center",
             "rounded-xl border-b-4 border-transparent",
             "px-4 py-4",
-            "xl:px-6 xl:py-6",
+            "sm:px-6 sm:py-6",
+            "xl:px-8 xl:py-8",
           )}
         >
           <p
