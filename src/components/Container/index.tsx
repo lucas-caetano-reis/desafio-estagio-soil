@@ -10,7 +10,7 @@ export default function Container({ children }: Readonly<ContainerProps>) {
       <div
         className={clsx(
           "max-w-screen",
-          "[--header-height:54px]",
+          "[--header-height:53px]",
           "sm:[--header-height:64px]",
           "md:[--header-height:80px]",
           "lg:[--header-height:112px]",

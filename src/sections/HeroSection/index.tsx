@@ -8,7 +8,7 @@ export default function HeroSection() {
     <section
       id="inicio"
       className={clsx(
-        "relative flex h-[calc(100dvh-var(--header-height))] flex-col overflow-hidden",
+        "relative flex min-h-[calc(100svh-var(--header-height))] flex-col overflow-hidden",
         "bg-[#aac55d] text-white",
       )}
     >

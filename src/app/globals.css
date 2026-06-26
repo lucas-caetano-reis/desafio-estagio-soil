@@ -6,7 +6,7 @@ html {
 }
 
 :root {
-  --scroll-padding-top: 54px;
+  --scroll-padding-top: 53px;
 }
 
 @media (min-width: 640px) {

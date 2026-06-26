@@ -36,7 +36,11 @@ export default function HeroBackgroundCarousel() {
 
   return (
     <div
-      className={clsx("CarouselContainer", "relative h-1/2 w-full lg:h-full")}
+      className={clsx(
+        "CarouselContainer",
+        "relative h-[calc((100svh-var(--header-height))/2)] w-full",
+        "lg:h-[calc(100svh-var(--header-height))]",
+      )}
     >
       <CarouselButton
         direction="prev"

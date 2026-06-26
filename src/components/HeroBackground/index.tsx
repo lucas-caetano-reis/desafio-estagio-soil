@@ -15,9 +15,10 @@ export default function HeroBackground({
       <Image
         src={imageSrc}
         alt={imageAlt}
-        fill
         priority
-        className="object-cover object-[50%_25%]"
+        width={960}
+        height={1280}
+        className="h-full w-full object-cover object-[50%_25%]"
       />
 
       <div
