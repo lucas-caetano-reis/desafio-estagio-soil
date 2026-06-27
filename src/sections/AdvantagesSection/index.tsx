@@ -1,5 +1,5 @@
-import AdvantagesIcons from "@/components/AdvantagesIcons";
 import clsx from "clsx";
+import AdvantagesIcons from "@/components/AdvantagesIcons";
 
 export default function AdvantagesSection() {
   return (

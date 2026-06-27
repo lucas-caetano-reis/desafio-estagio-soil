@@ -9,7 +9,7 @@ import SolutionSection from "@/sections/SolutionSection";
 import ProductsSection from "@/sections/ProductsSection";
 import AdvantagesSection from "@/sections/AdvantagesSection";
 import ReasonsSection from "@/sections/ReasonsSection";
-import MarketSection from "@/sections/MarketSection";
+import AppSection from "@/sections/AppSection";
 
 import Footer from "@/components/Footer";
 
@@ -26,7 +26,7 @@ export default function HomePage() {
         <ProductsSection />
         <AdvantagesSection />
         <ReasonsSection />
-        <MarketSection />
+        <AppSection />
       </main>
 
       <Footer />

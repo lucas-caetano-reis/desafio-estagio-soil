@@ -1,17 +1,17 @@
 import {
   House,
-  Store,
   BanknoteArrowDown,
   BanknoteArrowUp,
   Toolbox,
   ShoppingBasket,
   Contact,
+  Smartphone,
 } from "lucide-react";
 
 export const navigationItems = [
   {
     key: "home",
-    label: "Home +",
+    label: "Home",
     arialabel: "Voltar para o início da página",
     href: "#inicio",
     icon: House,
@@ -45,11 +45,11 @@ export const navigationItems = [
     icon: BanknoteArrowUp,
   },
   {
-    key: "mercado",
-    label: "Mercado",
-    arialabel: "Estatísticas de mercado",
-    href: "#mercado",
-    icon: Store,
+    key: "aplicativo",
+    label: "Aplicativo",
+    arialabel: "Baixe o aplicativo da Soil em seu celular",
+    href: "#aplicativo",
+    icon: Smartphone,
   },
   {
     key: "contato",

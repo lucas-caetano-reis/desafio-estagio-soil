@@ -1,7 +1,7 @@
-import clsx from "clsx";
+// Essa seção não é mais utilizada e será excluída no futuro
 
+import clsx from "clsx";
 import UnorderedList from "@/components/UnorderedList";
-import AppScreensCarousel from "@/components/AppScreensCarousel";
 
 import { marketStatistics } from "@/data/MarketStatistics/marketStatistics";
 
@@ -32,7 +32,7 @@ export default function MarketSection() {
 
         <h2
           className={clsx(
-            "mt-5 font-bold text-[#1f252c] leading-tight",
+            "mt-5 font-bold text-[#1b2027] leading-tight",
             "text-2xl sm:text-3xl md:text-4xl xl:text-5xl",
           )}
         >
@@ -49,50 +49,6 @@ export default function MarketSection() {
           )}
         />
       </article>
-
-      <h3
-        className={clsx(
-          "mt-12 font-bold text-[#1f252c] leading-tight tracking-tight",
-          "text-xl sm:text-2xl md:text-3xl lg:text-4xl",
-        )}
-      >
-        Conheça o aplicativo da Soil
-      </h3>
-
-      <h4
-        className={clsx(
-          "mt-2 text-[#1f252c] leading-tight",
-          "text-lg sm:text-xl md:text-2xl lg:text-3xl",
-        )}
-      >
-        Disponível para{" "}
-        <a
-          href="https://play.google.com/store/apps/details?id=com.soiltechapp2"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={clsx(
-            "text-[#a5bf55] underline decoration-[#a5bf55]/40 underline-offset-4",
-            "transition-colors hover:text-[#94ac4c] hover:decoration-[#94ac4c]",
-          )}
-        >
-          Android
-        </a>{" "}
-        e{" "}
-        <a
-          href="https://apps.apple.com/br/app/soilapp2/id6470928312"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={clsx(
-            "text-[#a5bf55] underline decoration-[#a5bf55]/40 underline-offset-4",
-            "transition-colors hover:text-[#94ac4c] hover:decoration-[#94ac4c]",
-          )}
-        >
-          iOS
-        </a>
-        :
-      </h4>
-
-      <AppScreensCarousel />
     </section>
   );
 }
