@@ -8,7 +8,8 @@ export default function ChallengesSection() {
     <section
       id="desafio"
       className={clsx(
-        "flex min-h-[calc(100svh-var(--header-height))] flex-col items-center",
+        "flex min-h-[calc(100svh-var(--header-height))] flex-col",
+        "items-center justify-center",
         "bg-[#fffdf9]",
         "px-8 py-8",
         "sm:px-12 sm:py-10",
